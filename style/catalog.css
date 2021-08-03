@@ -1,52 +1,5 @@
-@charset "UTF-8";
-.catalog-head {
-  background-color: #F8F3F4;
-}
-
-.catalog-header {
-  height: 148px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.catalog-header__heading {
-  text-transform: uppercase;
-  font-size: 24px;
-  line-height: 29px;
-  color: #F16D7F;
-}
-
-.catalog-header .breadcrumbs-link {
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 17px;
-  color: #636363;
-}
-
-.catalog-header .breadcrumbs-link:last-of-type {
-  font-weight: 700;
-  color: #F16D7F;
-}
-
 .filters {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: 50px;
-  /* стили при наведении курсора на checkbox */
-  /* стили для активного состояния чекбокса (при нажатии на него) */
-  /* стили для чекбокса, находящегося в фокусе */
-  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-  /* стили для чекбокса, находящегося в состоянии disabled */
 }
 
 .filters .filter {
@@ -146,38 +99,6 @@
   display: block;
 }
 
-.filters > details {
-  position: relative;
-  margin-right: 30px;
-}
-
-.filters > details:last-of-type {
-  margin-right: 0;
-}
-
-.filters-summary {
-  position: relative;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 17px;
-  color: #6F6E6E;
-  list-style-type: none;
-}
-
-.filters-summary::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 2px;
-  margin-left: 10px;
-  width: 5px;
-  height: 5px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  border-bottom: 2px solid #6F6E6E;
-  border-right: 2px solid #6F6E6E;
-}
-
 .filters .trending {
   width: 120px;
 }
@@ -196,90 +117,6 @@
 
 .filters .price > ul {
   width: 120px;
-}
-
-.filters-variants {
-  position: absolute;
-  padding-top: 0.5em;
-  padding-left: 0.5em;
-  padding-bottom: 0.7em;
-  list-style-type: none;
-  background-color: #FFFFFF;
-  -webkit-box-shadow: 5px 10px 20px rgba(10, 21, 34, 0.2);
-          box-shadow: 5px 10px 20px rgba(10, 21, 34, 0.2);
-  color: #6F6E6E;
-}
-
-.filters-variants .size-variant {
-  text-transform: uppercase;
-}
-
-.filters-variants .trending-variant {
-  text-transform: capitalize;
-}
-
-.filters .custom-checkbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.filters .custom-checkbox + label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.filters .custom-checkbox + label::before {
-  content: '';
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  border: 1px solid #EBEBEB;
-  margin-right: 0.5em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
-}
-
-.filters .custom-checkbox:checked + label::before {
-  border-color: #F16D7F;
-  background-color: #F16D7F;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-}
-
-.filters .custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
-  border-color: #FF6A6A;
-}
-
-.filters .custom-checkbox:not(:disabled):active + label::before {
-  background-color: #F8F3F4;
-  border-color: #F8F3F4;
-}
-
-.filters .custom-checkbox:focus + label::before {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(247, 121, 142, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(247, 121, 142, 0.25);
-}
-
-.filters .custom-checkbox:focus:not(:checked) + label::before {
-  border-color: #F1E4E6;
-}
-
-.filters .custom-checkbox:disabled + label::before {
-  background-color: #e9ecef;
 }
 
 .nav-links {

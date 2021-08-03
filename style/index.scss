@@ -37,7 +37,7 @@
     font-size: 16px;
     line-height: 19px;
     &-part1{
-        display: flex;
+        display: flex; //a{display:block;}
         justify-content: space-between;
         &>a{
             height: 260px;
