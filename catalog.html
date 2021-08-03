@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalog</title>
+    <link rel="icon" href="image/logo.svg" type="image/svg">
+    <script src="https://kit.fontawesome.com/890dd60a78.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/common.css">
     <link rel="stylesheet" href="style/catalog.css">
-    <link rel="icon" href="image/logo.svg" type="image/svg">
 </head>
 
 <body>
@@ -135,32 +136,32 @@
                     <details class="trending">
                         <summary class="filters-summary">trending now</summary>
                         <ul class="filters-variants">
-                            <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name="outerwear"
                                     id="custom-checkbox1"><label for="custom-checkbox1">outerwear</label></li>
-                            <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name="shoes"
                                     id="custom-checkbox2"><label for="custom-checkbox2">shoes</label></li>
-                            <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name="pants"
                                     id="custom-checkbox3"><label for="custom-checkbox3">pants &amp; shorts</label></li>
-                            <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name="shirts"
                                     id="custom-checkbox4"><label for="custom-checkbox4">shirts &amp; t-shirts</label>
                             </li>
-                            <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="trending-variant"><input class="custom-checkbox" type="checkbox" name="bags"
                                     id="custom-checkbox5"><label for="custom-checkbox5">bags</label></li>
                         </ul>
                     </details>
                     <details class="size">
                         <summary class="filters-summary">size</summary>
                         <ul class="filters-variants">
-                            <li class="size-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="size-variant"><input class="custom-checkbox" type="checkbox" name="xs"
                                     id="custom-checkbox6"><label for="custom-checkbox6">xs</label>
                             </li>
-                            <li class="size-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="size-variant"><input class="custom-checkbox" type="checkbox" name="s"
                                     id="custom-checkbox7"><label for="custom-checkbox7">s</label></li>
-                            <li class="size-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="size-variant"><input class="custom-checkbox" type="checkbox" name="m"
                                     id="custom-checkbox8"><label for="custom-checkbox8">m</label></li>
-                            <li class="size-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="size-variant"><input class="custom-checkbox" type="checkbox" name="l"
                                     id="custom-checkbox9"><label for="custom-checkbox9">l</label></li>
-                            <li class="size-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="size-variant"><input class="custom-checkbox" type="checkbox" name="xl"
                                     id="custom-checkbox10"><label for="custom-checkbox10">xl</label>
                             </li>
                         </ul>
@@ -168,87 +169,144 @@
                     <details class="price">
                         <summary class="filters-summary">price</summary>
                         <ul class="filters-variants">
-                            <li class="price-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="price-variant"><input class="custom-checkbox" type="checkbox" name="upto100"
                                     id="custom-checkbox11"><label for="custom-checkbox11">10$ - 100$</label></li>
-                            <li class="price-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="price-variant"><input class="custom-checkbox" type="checkbox" name="upto300"
                                     id="custom-checkbox12"><label for="custom-checkbox12">100$ - 300$</label></li>
-                            <li class="price-variant"><input class="custom-checkbox" type="checkbox" name=""
+                            <li class="price-variant"><input class="custom-checkbox" type="checkbox" name="upto500"
                                     id="custom-checkbox13"><label for="custom-checkbox13">300$ - 500$</label></li>
-                            <li class="price-variant"><input class="custom-checkbox" type="checkbox" name=""
-                                    id="custom-checkbox14"><label for="custom-checkbox14">500$ < </label>
+                            <li class="price-variant"><input class="custom-checkbox" type="checkbox" name="more500"
+                                    id="custom-checkbox14"><label for="custom-checkbox14">500$ &lt; </label>
                             </li>
                         </ul>
                     </details>
                 </nav>
                 <div class="items container">
-                    <div class="items-container">
-                        <a href="#" class="item">
+                    <div class="item-box">
+                        <a href="product.html" class="item">
                             <img src="image/catalog-item1.png" alt="item1" class="item-img">
-                            <h4 class="item-header">ELLERY X M'O CAPSULE</h4>
-                            <p class="item-text">Known for her sculptural takes on traditional tailoring, Australian
-                                arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
+                            <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
-                        <a href="#" class="item">
+                        <div class="item-cart">
+                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add to cart</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <a href="product.html" class="item">
                             <img src="image/catalog-item2.png" alt="item2" class="item-img">
-                            <h4 class="item-header">ELLERY X M'O CAPSULE</h4>
-                            <p class="item-text">Known for her sculptural takes on traditional tailoring, Australian
-                                arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
+                            <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
-                        <a href="#" class="item">
+                        <div class="item-cart">
+                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add to cart</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <a href="product.html" class="item">
                             <img src="image/catalog-item3.png" alt="item3" class="item-img">
-                            <h4 class="item-header">ELLERY X M'O CAPSULE</h4>
-                            <p class="item-text">Known for her sculptural takes on traditional tailoring, Australian
-                                arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
+                            <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
+                        <div class="item-cart">
+                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add to cart</p>
+                            </a>
+                        </div>
                     </div>
-                    <div class="items-container">
-                        <a href="#" class="item">
+                    <div class="item-box">
+                        <a href="product.html" class="item">
                             <img src="image/catalog-item4.png" alt="item4" class="item-img">
-                            <h4 class="item-header">ELLERY X M'O CAPSULE</h4>
-                            <p class="item-text">Known for her sculptural takes on traditional tailoring, Australian
-                                arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
+                            <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
-                        <a href="#" class="item">
-                            <img src="image/catalog-item5.png" alt="item5" class="item-img">
-                            <h4 class="item-header">ELLERY X M'O CAPSULE</h4>
-                            <p class="item-text">Known for her sculptural takes on traditional tailoring, Australian
-                                arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                            <p class="item-price">$52.00</p>
-                        </a>
-                        <a href="#" class="item">
-                            <img src="image/catalog-item6.png" alt="item6" class="item-img">
-                            <h4 class="item-header">ELLERY X M'O CAPSULE</h4>
-                            <p class="item-text">Known for her sculptural takes on traditional tailoring, Australian
-                                arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                            <p class="item-price">$52.00</p>
-                        </a>
+                        <div class="item-cart">
+                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add to cart</p>
+                            </a>
+                        </div>
                     </div>
-                    <div class="items-container">
-                        <a href="#" class="item">
+                    <div class="item-box">
+                        <a href="product.html" class="item">
+                            <img src="image/catalog-item5.png" alt="item5" class="item-img">
+                            <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
+                            <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
+                            <p class="item-price">$52.00</p>
+                        </a>
+                        <div class="item-cart">
+                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add to cart</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <a href="product.html" class="item">
+                            <img src="image/catalog-item6.png" alt="item6" class="item-img">
+                            <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
+                            <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
+                            <p class="item-price">$52.00</p>
+                        </a>
+                        <div class="item-cart">
+                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add to cart</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <a href="product.html" class="item">
                             <img src="image/catalog-item7.png" alt="item4" class="item-img">
-                            <h4 class="item-header">ELLERY X M'O CAPSULE</h4>
-                            <p class="item-text">Known for her sculptural takes on traditional tailoring, Australian
-                                arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
+                            <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
-                        <a href="#" class="item">
+                        <div class="item-cart">
+                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add to cart</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <a href="product.html" class="item">
                             <img src="image/catalog-item8.png" alt="item5" class="item-img">
-                            <h4 class="item-header">ELLERY X M'O CAPSULE</h4>
-                            <p class="item-text">Known for her sculptural takes on traditional tailoring, Australian
-                                arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
+                            <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
-                        <a href="#" class="item">
+                        <div class="item-cart">
+                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add to cart</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <a href="product.html" class="item">
                             <img src="image/catalog-item9.png" alt="item6" class="item-img">
-                            <h4 class="item-header">ELLERY X M'O CAPSULE</h4>
-                            <p class="item-text">Known for her sculptural takes on traditional tailoring, Australian
-                                arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
+                            <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
+                        <div class="item-cart">
+                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add to cart</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <nav class="nav-links container">
@@ -298,7 +356,7 @@
                         <h3 class="subscription-header">subscribe</h3>
                         <p class="subscription-text">for our newletter and promotion</p>
                         <form action="#" class="subscription-form">
-                            <input type="email" class="subscription-form__input" required a href="#"
+                            <input type="email" class="subscription-form__input" required
                                 placeholder="Enter Your Email">
                             <button type="submit" class="subscription-form__button">Subscribe</button>
                         </form>
@@ -308,17 +366,13 @@
             <div class="footer-lower">
                 <div class="footer-lower__container container">
                     <p class="footer-lower__text">
-                        © 2021 Brand All Rights Reserved.
+                        &copy; 2021 Brand All Rights Reserved.
                     </p>
                     <div class="socialmedia">
-                        <a href="#" class="socialmedia-link"><img src="image/fb.svg" alt="facebook"
-                                class="socialmedia-icon"></a>
-                        <a href="#" class="socialmedia-link"><img src="image/inst.svg" alt="instagram"
-                                class="socialmedia-icon"></a>
-                        <a href="#" class="socialmedia-link"><img src="image/pin.svg" alt="pinterest"
-                                class="socialmedia-icon"></a>
-                        <a href="#" class="socialmedia-link"><img src="image/twitter.svg" alt="twitter"
-                                class="socialmedia-icon"></a>
+                        <a href="#" class="socialmedia-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="socialmedia-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="socialmedia-link"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="socialmedia-link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
