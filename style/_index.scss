@@ -1,0 +1,121 @@
+// banner
+.introduction{
+    display: flex;
+    align-items: center;
+    background-color: $introduction-bg__color;
+    &-intro{
+        display: flex;
+    }
+    &-text{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        color: $dark-color;
+        text-transform: uppercase;
+        &__header{
+            font-weight: 900;
+            font-size: 48px;
+            line-height: 58px;
+        }
+        &__fashion{
+            color: $highlight-pink__color;
+        }
+    }
+    .line{
+        width: 12px;
+        background-color: $highlight-pink__color;
+        margin-right: 16px;
+    }
+}
+
+// special offers
+.offers{
+    padding-top: 65px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    &-part1{
+        display: flex; //a{display:block;}
+        justify-content: space-between;
+        &>a{
+            height: 260px;
+            width: $block-width;
+            position: relative;
+            text-decoration: none;
+            color:$offers-text__color;
+            &>p{
+                position:relative;
+                top:40%;
+                z-index: 2;
+            }
+        }
+    }
+    &-part2{
+        margin-top: 30px;
+        &>a{
+            height: 180px;
+            width: 100%;
+            display: block;
+            position: relative;
+            text-decoration: none;
+            color:$offers-text__color;
+            &>p{
+                position:relative;
+                top:40%;
+                z-index: 2;
+            }
+        }
+    }
+    .cover{
+        position: absolute;
+        background: $offers-cover__color;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    &-women{
+        background: url("../image/offers-women.png") no-repeat center center;
+        background-size: cover;
+    }
+    &-men{
+        background: url("../image/offers-men.png") no-repeat center center;
+        background-size: cover;
+    }
+    &-kids{
+        background: url("../image/offers-kids.png") no-repeat center center;
+        background-size: cover;
+    }
+    &-accesories{
+        background: url("../image/offers-accesories.png") no-repeat center center;
+        background-size: cover;
+    }
+    &-headtext{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: $highlight-pink__color;
+    }
+}
+
+.fetured{
+    display: flex;
+    flex-direction: column;
+    padding-top: 96px;
+    &-description{
+        text-align: center;
+    }
+    &-header{
+        font-size: 30px;
+        line-height: 36px;
+        color: $dark-color;
+    }
+    &-text{
+        font-size: 14px;
+        line-height: 17px;
+        color: $fetured-text__color;
+    }
+    
+}
