@@ -8,8 +8,7 @@
     <title>Man</title>
     <link rel="icon" href="image/logo.svg" type="image/svg">
     <script src="https://kit.fontawesome.com/890dd60a78.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style/style.css">
-    <!-- <link rel="stylesheet" href="style/catalog.css"> -->
+    <link rel="stylesheet" href="style/style.css" media="print" onload="this.media='all'">
 </head>
 
 <body>
@@ -85,53 +84,47 @@
                     </div>
                 </header>
                 <nav class="filters container">
-                    <div class="filter">
-                        <div class="filter-head">
-                            filter <img class="filter-icon" src="image/filter.svg" alt="filter">
-                        </div>
-                        <div class="filter-navigation">
-                            <div class="filter-navigation__head">
-                                filter <img class="filter-icon" src="image/filter.svg" alt="filter">
-                            </div>
-                            <ul class="filter-options">
-                                <li class="filter-option"><span>category</span>
-                                    <ul class="filter-items">
-                                        <li class="filter-item"> <a href="#">accessories</a></li>
-                                        <li class="filter-item"> <a href="#">bags</a></li>
-                                        <li class="filter-item"> <a href="#">denim</a></li>
-                                        <li class="filter-item"> <a href="#">hoodies & sweatshirts</a></li>
-                                        <li class="filter-item"> <a href="#">jackets & coats</a></li>
-                                        <li class="filter-item"> <a href="#">polos</a></li>
-                                        <li class="filter-item"> <a href="#">shirts</a></li>
-                                        <li class="filter-item"> <a href="#">shoes</a></li>
-                                        <li class="filter-item"> <a href="#">sweaters &amp; knits</a></li>
-                                        <li class="filter-item"> <a href="#">t-shirts</a></li>
-                                        <li class="filter-item"> <a href="#">tanks</a></li>
-                                    </ul>
-                                </li>
-                                <li class="filter-option"><span>brand</span>
-                                    <ul class="filter-items">
-                                        <li class="filter-item"> <a href="#">ostin</a></li>
-                                        <li class="filter-item"> <a href="#">zara</a></li>
-                                        <li class="filter-item"> <a href="#">pull &amp; bear</a></li>
-                                        <li class="filter-item"> <a href="#">dior</a></li>
-                                        <li class="filter-item"> <a href="#">louis vuitton</a></li>
-                                        <li class="filter-item"> <a href="#">gucci</a></li>
-                                    </ul>
-                                </li>
-                                <li class="filter-option"><span>designer</span>
-                                    <ul class="filter-items">
-                                        <li class="filter-item"> <a href="#">lorem</a></li>
-                                        <li class="filter-item"> <a href="#">ipsum</a></li>
-                                        <li class="filter-item"> <a href="#">dolor</a></li>
-                                        <li class="filter-item"> <a href="#">sit</a></li>
-                                        <li class="filter-item"> <a href="#">amet</a></li>
-                                        <li class="filter-item"> <a href="#">consectetur</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <details class="filter">
+                        <summary class="filter-summary">filter <img class="filter-icon" src="image/filter.svg"
+                                alt="filter"></summary>
+                        <ul class="filter-options">
+                            <li class="filter-option"><span>category</span>
+                                <ul class="filter-items">
+                                    <li class="filter-item"> <a href="#">accessories</a></li>
+                                    <li class="filter-item"> <a href="#">bags</a></li>
+                                    <li class="filter-item"> <a href="#">denim</a></li>
+                                    <li class="filter-item"> <a href="#">hoodies & sweatshirts</a></li>
+                                    <li class="filter-item"> <a href="#">jackets & coats</a></li>
+                                    <li class="filter-item"> <a href="#">polos</a></li>
+                                    <li class="filter-item"> <a href="#">shirts</a></li>
+                                    <li class="filter-item"> <a href="#">shoes</a></li>
+                                    <li class="filter-item"> <a href="#">sweaters &amp; knits</a></li>
+                                    <li class="filter-item"> <a href="#">t-shirts</a></li>
+                                    <li class="filter-item"> <a href="#">tanks</a></li>
+                                </ul>
+                            </li>
+                            <li class="filter-option"><span>brand</span>
+                                <ul class="filter-items">
+                                    <li class="filter-item"> <a href="#">ostin</a></li>
+                                    <li class="filter-item"> <a href="#">zara</a></li>
+                                    <li class="filter-item"> <a href="#">pull &amp; bear</a></li>
+                                    <li class="filter-item"> <a href="#">dior</a></li>
+                                    <li class="filter-item"> <a href="#">louis vuitton</a></li>
+                                    <li class="filter-item"> <a href="#">gucci</a></li>
+                                </ul>
+                            </li>
+                            <li class="filter-option"><span>designer</span>
+                                <ul class="filter-items">
+                                    <li class="filter-item"> <a href="#">lorem</a></li>
+                                    <li class="filter-item"> <a href="#">ipsum</a></li>
+                                    <li class="filter-item"> <a href="#">dolor</a></li>
+                                    <li class="filter-item"> <a href="#">sit</a></li>
+                                    <li class="filter-item"> <a href="#">amet</a></li>
+                                    <li class="filter-item"> <a href="#">consectetur</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </details>
                     <details class="trending">
                         <summary class="filters-summary">trending now</summary>
                         <ul class="filters-variants">
@@ -182,7 +175,7 @@
                 </nav>
                 <div class="items container">
                     <div class="item-box">
-                        <a href="product.html" class="item">
+                        <a href="product.html#" class="item">
                             <img src="image/catalog-item1.png" alt="item1" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
@@ -196,7 +189,7 @@
                         </div>
                     </div>
                     <div class="item-box">
-                        <a href="product.html" class="item">
+                        <a href="product.html#" class="item">
                             <img src="image/catalog-item2.png" alt="item2" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
@@ -210,7 +203,7 @@
                         </div>
                     </div>
                     <div class="item-box">
-                        <a href="product.html" class="item">
+                        <a href="product.html#" class="item">
                             <img src="image/catalog-item3.png" alt="item3" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
@@ -224,7 +217,7 @@
                         </div>
                     </div>
                     <div class="item-box">
-                        <a href="product.html" class="item">
+                        <a href="product.html#" class="item">
                             <img src="image/catalog-item4.png" alt="item4" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
@@ -238,7 +231,7 @@
                         </div>
                     </div>
                     <div class="item-box">
-                        <a href="product.html" class="item">
+                        <a href="product.html#" class="item">
                             <img src="image/catalog-item5.png" alt="item5" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
@@ -252,7 +245,7 @@
                         </div>
                     </div>
                     <div class="item-box">
-                        <a href="product.html" class="item">
+                        <a href="product.html#" class="item">
                             <img src="image/catalog-item6.png" alt="item6" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
@@ -266,7 +259,7 @@
                         </div>
                     </div>
                     <div class="item-box">
-                        <a href="product.html" class="item">
+                        <a href="product.html#" class="item">
                             <img src="image/catalog-item7.png" alt="item4" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
@@ -280,7 +273,7 @@
                         </div>
                     </div>
                     <div class="item-box">
-                        <a href="product.html" class="item">
+                        <a href="product.html#" class="item">
                             <img src="image/catalog-item8.png" alt="item5" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
@@ -294,7 +287,7 @@
                         </div>
                     </div>
                     <div class="item-box">
-                        <a href="product.html" class="item">
+                        <a href="product.html#" class="item">
                             <img src="image/catalog-item9.png" alt="item6" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,

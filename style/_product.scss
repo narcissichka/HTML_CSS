@@ -81,11 +81,11 @@
   
 .product{
     &-carousel{
-        width: 100%;
-        height: $carousel-height;
-        background-color: $product-carousel-bg__color;
-        position: relative;
-        &__inner{
+      // width: $screen-width;
+      height: $carousel-height;
+      background-color: lighten($secondary-grey__color, 53.5%);
+      position: relative;
+      &__inner{
             position: absolute;
             top: 0;
             right: 0;
@@ -190,13 +190,11 @@
         z-index: 1;
         text-align: center;
         background-color: $navigation-bg__color;
-        border: 1px solid $product-carousel-bg__color;
+        border: 1px solid lighten($secondary-grey__color, 53.5%);
         &__collection-header{
             margin-top: 64px;
             text-transform: uppercase;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 17px;
+            @include font(300, 14px, 17px, normal);
             color: $highlight-pink__color;
         }
         &__pink-line{
@@ -204,31 +202,25 @@
             display: inline-block;
             width:63px;
             height: 3px;
-            background-color: $product-page-highlight__color;
+            background-color: darken($highlight-pink__color, 4%);
         }
         &__header{
             margin-top: 12px;
             text-transform: uppercase;
-            font-weight: 300;
-            font-size: 18px;
-            line-height: 22px;
-            color: $product-info-header__color;
+            @include font(300, 18px, 22px, normal);
+            color: darken($secondary-grey__color, 13%);
         }
         &__description{
             display: inline-block;
             margin-top: 48px;
             width: 555px;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 17px;
-            color: $product-info-text__color;
+            @include font(300, 14px, 17px, normal);
+            color: lighten(darken($secondary-grey__color, 8%),2%);
         }
         &__price{
             margin-top: 32px;
-            font-weight: 300;
-            font-size: 24px;
-            line-height: 29px;
-            color: $product-page-highlight__color;
+            @include font(300, 24px, 29px, normal);
+            color: darken($highlight-pink__color, 4%);
         }
         .color{
             width: 120px;
@@ -262,30 +254,21 @@
             display: flex;
             justify-content: center;
         }
-        &__add{
-            width:211px;
-            height:47px;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            padding: 14px;
-            color:$button-text__color;
-            background-color: $product-page-highlight__color;
-            border: 1px solid $button-bd__color;
-            &-cart{
-                width: 26px;
-                margin-right:23px;
-            }
-            &:hover{
-                background-color: $button-text__color;
-                color: $button-hover__color;
-            }
-            &:hover &-cart{
-                filter: brightness(0) saturate(100%);
-                filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%)
-            }
+        &__add-cart{
+          width: 26px;
+          margin-right:23px;
+          transition: filter 0.2s linear;
         }
-
+        //Element
+        &-add__button{
+          display: flex;
+          align-items: center;
+          padding: 14px;
+          &:hover .product-information__add-cart{
+              filter: brightness(0) saturate(100%);
+              filter: invert(45%) sepia(55%) saturate(677%) hue-rotate(302deg) brightness(97%) contrast(93%)
+          }
+        }
     }
 }
 .filters{

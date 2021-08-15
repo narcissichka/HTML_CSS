@@ -1,6 +1,5 @@
 .cart-page{
-    margin-top:96px;
-    margin-bottom: 129px;
+    margin-block: 96px 129px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -18,13 +17,13 @@
                 margin-bottom: 40px;
             }
             &-hover{
+                display: none;
                 position:absolute;
                 top:0;
                 left:0;
                 background: $offers-cover__color;
                 width: 100%;
                 height: 100%;
-                display: none;
             }
             &-info{
                 margin-top: 22px;
@@ -32,16 +31,13 @@
                 &__header{
                     margin-bottom: 42px;
                     text-transform: uppercase;
-                    font-weight: normal;
-                    font-size: 24px;
-                    line-height: 29px;
+                    @include font(normal, 24px, 29px, normal);
                     color: $dark-color;
                 }
                 &__details{
                     text-transform: capitalize;
-                    font-size: 22px;
-                    line-height: 32px;  //26px+6px - as there is also a margin
-                    color: $cart-item-details__color;
+                    @include font(normal, 22px, 32px, normal);
+                    color: darken($secondary-grey__color, 9%);
                     &-price{
                         color: $highlight-pink__color;
                     }
@@ -50,8 +46,7 @@
                     }
                     &>input{
                         width: 44px;
-                        font-size: 18px;
-                        line-height: 22px;
+                        @include font(normal, 18px, 22px, normal);
                         text-align: center;
                         padding-left: 10px;
                         color: $secondary-grey__color;
@@ -74,22 +69,7 @@
             display: flex;
             justify-content: space-between;
         }
-        &__button{
-            width: 225px;
-            height: 50px;
-            text-decoration: none;
-            text-align: center;
-            text-transform: uppercase;
-            line-height: 50px;
-            font-weight: 300;
-            font-size: 14px;
-            color: $dark-color;
-            border: 1px solid $cart-buttons-bd__color;
-            &:hover{
-                color: $button-text__color;
-                background-color: $dark-color;
-            }
-        }
+        
     }
     .cart-info{
         margin-top: 21px;
@@ -99,9 +79,7 @@
             &-header{
                 margin-bottom: 21px;
                 text-transform: uppercase;
-                font-weight: 300;
-                font-size: 16px;
-                line-height: 19px;
+                @include font(300, 16px, 19px, normal);
                 color: $dark-color;
             }
             &>input{
@@ -109,33 +87,14 @@
                 margin-bottom: 21px;
                 padding-left:17px;
                 text-transform: capitalize;
-                font-weight: 300;
-                font-size: 13px;
-                line-height: 16px;
-                border: 1px solid $cart-buttons-bd__color;
+                @include font(300, 13px, 16px, normal);
+                border: 1px solid lighten($secondary-grey__color, 21%);
             }
             &>input::placeholder{
                 color: $dark-color;
             }
             &>input:first-of-type::placeholder{
-                color: $cart-input-country__color;
-            }
-            
-            &-quote{
-                width: 100px;
-                height: 34px;
-                text-align: center;
-                text-transform: uppercase;
-                text-decoration: none;
-                font-weight: 300;
-                font-size: 11px;
-                line-height: 34px;
-                color: $cart-quote__color;
-                border: 1px solid $cart-buttons-bd__color;
-                &:hover{
-                    color: $button-text__color;
-                    background-color: $dark-color;
-                }
+                color: lighten($secondary-grey__color, 26%);
             }
         }
 
@@ -143,19 +102,16 @@
             margin-top: 58px;
             padding: 40px;
             width: $block-width;
-            background-color: $cart-checkout-bg__color;
+            background-color: lighten($secondary-grey__color, 52%);
             text-align: right;
             &-sub{
                 text-transform: uppercase;
-                font-size: 11px;
-                line-height: 13px;
-                color: $cart-quote__color;
+                @include font(normal, 11px, 13px, normal);
+                color: darken($secondary-grey__color, 14%);
             }
             &-header{
                 text-transform: uppercase;
-                font-weight: 300;
-                font-size: 16px;
-                line-height: 19px;
+                @include font(300, 16px, 19px, normal);
                 color: $dark-color;
             }
             &-grand{
@@ -163,24 +119,24 @@
                 color: $highlight-pink__color;
             }
             &-hline{
-                margin-top: 21px;
-                margin-bottom: 17px;
+                margin-block: 21px 17px;
                 width:275px;
                 height: 1px;
                 display: inline-block;
-                background-color: $cart-hline__color;
+                background-color: lighten($secondary-grey__color, 45.5%);
             }
+            //бэм
             &-button{
                 width:275px;
                 height: 50px;
                 text-transform: uppercase;
-                font-size: 16px;
-                font-weight: 300;
+                @include font(300, 16px, 50px, normal);
                 color: $button-text__color;
                 background-color: $highlight-pink__color;
                 border: 1px solid $highlight-pink__color;
+                transition: color 0.2s linear, background-color 0.2s linear;
                &:hover{
-                background-color: $cart-checkout-bg__color;
+                background-color: lighten($secondary-grey__color, 52%);
                 color: $highlight-pink__color;
                }
                 

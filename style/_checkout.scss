@@ -1,0 +1,79 @@
+.checkout{
+    margin-block: 64px 96px;
+    display: flex;
+    .registration, .loyalty{
+        margin-inline: auto;
+    }
+    .registration{
+        width: $block-width;
+        &-heading{
+            margin-bottom: 21px;
+            text-transform: capitalize;
+            @include font(300, 16px, 19px, normal);
+            color: $dark-color;
+            &:last-of-type{
+                margin-top: 35px;
+            }
+        }
+        &-input{
+            //same as cart-page! to rewrite
+            display: block;
+            width: 100%;
+            height: 45px;
+            margin-bottom: 21px;
+            padding-left:17px;
+            text-transform: capitalize;
+            @include font(300, 13px, 16px, normal);
+            border: 1px solid lighten($secondary-grey__color, 21%);
+            color: lighten($secondary-grey__color, 26%);
+            &:last-of-type{
+                margin-bottom: 16px;
+            }
+        }
+        &-radio{
+            &+label{
+                text-transform: capitalize;
+                margin-right: 20px;
+                @include font(300, 11px, 13px, normal);
+            }
+        }
+        &-passwordParametersText{
+            @include font(300, 13px, 16px, normal);
+            color: lighten($secondary-grey__color, 26%);
+        }
+        //Element
+        &__button{
+            margin-top: 40px;
+            .registration-button__img{
+                margin-left: 20px;
+                transition: filter 0.2s linear;
+            }
+            &:hover .registration-button__img{
+                filter: invert(60%) sepia(51%) saturate(3302%) hue-rotate(313deg) brightness(91%) contrast(107%);
+            }
+        }
+    }
+    .loyalty{
+        margin-left: 128px;
+        width: 650px;
+        &-heading, &-text, &-list{
+            margin-bottom: 21px;
+            @include font(300, 24px, 29px, normal);
+        }
+        &-heading{
+            text-transform: uppercase;
+        }
+        &-list{
+            margin-left: 25px;
+            list-style-type: none;
+            list-style-image: url("../image/list-img.svg");
+        }
+        &-item{
+            margin-bottom: 16px;
+            padding-left: 23px;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

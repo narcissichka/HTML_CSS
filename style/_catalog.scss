@@ -1,85 +1,84 @@
 .filters{
     margin-top: 50px;
     .filter{
-        width: 360px;
+        width: $block-width;
         margin-left: 15px;
         margin-right: 30px;
         text-transform: uppercase;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 17px;
-        position: relative;
-        &-navigation{
-            display: none;
-            position: absolute;
-            background-color: $navigation-bg__color;
-            box-shadow: 5px 10px 20px $shadow-color;
-            width: 100%;
-            left:-15px;
-            padding-left: 15px;
-            top:-15px;
-            padding-top: 15px;
+        @include font(600, 14px, 17px, normal);
+        left:-15px;
+        padding-left: 15px;
+        &-summary{
+            list-style-type: none;
+            transition: color 0.2s linear;
         }
         &-options{
+            width:100%;
+            position: absolute;
+            left:0;
+            padding-left: 15px;
             list-style-type: none;
+            background-color: $navigation-bg__color;
+            box-shadow: 5px 20px 20px $shadow-color;
         }
         &-option{
             margin-top: 18px;
-        }
-        &-option:last-of-type{
-            margin-bottom: 18px;
-        }
-        &-option>span{
-            display: inline-block;
-            height:37px;
-            width: 326px;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 37px;
-            padding-left: 11px;
-            border-left: 5px solid $catalog-page-nav-hover__color;
-            border-bottom: 1px solid $catalog-page__and__checkbox-bd__color;
+            &:last-of-type{
+                margin-bottom: 18px;
+            }
+            &>span{
+                display: inline-block;
+                height:37px;
+                width: 326px;
+                @include font(normal, 14px, 37px, normal);
+                padding-left: 11px;
+                border-left: 5px solid desaturate(darken($highlight-pink__color, 4%), 1%);
+                border-bottom: 1px solid lighten($secondary-grey__color, 49%);
+                transition: color 0.2s linear;
+            }
+            &:hover span{
+                color: desaturate(darken($highlight-pink__color, 4%), 1%);
+            }
+            &:hover .filter-items{
+                display: block;
+            }
         }
         &-items{
-            display:none;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 17px;
-            text-transform: capitalize;
             list-style-type: none;
+            display:none;
+            @include font(normal, 14px, 17px, normal);
+            text-transform: capitalize;
             margin-left: 34px;
-        }
-        &-items>li:first-of-type{
-            margin-top: 24px;
+            &>li:first-of-type{
+                margin-top: 24px;
+            }
         }
         &-item{
             margin-top: 11px;
+            &>a{
+                text-decoration: none;
+                color: $secondary-grey__color;
+                transition: color 0.2s linear;
+                &:hover{
+                    color:desaturate(darken($highlight-pink__color, 4%), 1%);
+                }
+            }
         }
-        &-item>a{
-            text-decoration: none;
-            color: $secondary-grey__color;
+        &:hover .filter-summary, &[open] .filter-summary{
+            color: desaturate(darken($highlight-pink__color, 4%), 1%);
         }
+        &:hover .filter-icon, &[open] .filter-icon{
+            filter: invert(60%) sepia(51%) saturate(3302%) hue-rotate(313deg) brightness(91%) contrast(107%);
+        }
+        &[open]{
+            box-shadow: 5px 15px 20px $shadow-color;
+        }    
         &-icon{
             margin-left: 12px;
+            transition: filter 0.2s linear;
         }
+    }
 
-    }
-    .filter:hover{
-        color:$catalog-page-nav-hover__color;
-    }
-    .filter:hover .filter-head{
-        display: none;
-    }
-    .filter:hover .filter-icon{
-        filter: invert(60%) sepia(51%) saturate(3302%) hue-rotate(313deg) brightness(91%) contrast(107%);
-    }
-    .filter:hover .filter-navigation{
-        display:block;
-        background-color: $navigation-bg__color;
-    }
-    .filter-option:hover .filter-items{
-        display: block;
-    }
     .trending{
         width: 120px;
         &>ul{
@@ -106,51 +105,51 @@
     align-items: center;
     height:43px;
     width:283px;
-    border: 1px solid $catalog-page__and__checkbox-bd__color;
+    border: 1px solid lighten($secondary-grey__color, 49%);
 }
 [class^="catalog-page_"]{
     margin-right: 18px;
     text-decoration: none;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    color: $catalog-page__and__checkbox-bd__color;
+    @include font(300, 16px, 19px, normal);
+    color: lighten($secondary-grey__color, 49%);
+    transition: color 0.2s linear;
 }
 .catalog-page_1{
-    color: $catalog-page-nav-hover__color;
+    color: desaturate(darken($highlight-pink__color, 4%), 1%);
 }
 [class^="catalog-page_"]:hover{
-    color: $button-bd__color;
+    color: lighten(saturate($highlight-pink__color, 17%), 1%);
+}
+.arrow{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    transition: border-color 0.2s linear;
+    &:hover{
+        border-color: lighten($arrows-bd__color, 60%);
+    }
 }
 .arrow-previous{
     margin-right: 18px;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg);
     border-bottom: 3px solid $arrows-bd__color;
     border-left: 3px solid $arrows-bd__color;
     &:hover ~ .catalog-page_6{
-        color: $catalog-page-nav-hover__color;
+        color: desaturate(darken($highlight-pink__color, 4%), 1%);
     }
     &:hover ~ .catalog-page_1{
-        color: $catalog-page__and__checkbox-bd__color;
+        color: lighten($secondary-grey__color, 49%);
     }    
 }
 .arrow-next{
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg);
     border-top: 3px solid $arrows-bd__color;
     border-right: 3px solid $arrows-bd__color;
     &:hover ~ .catalog-page_2{
-        color: $catalog-page-nav-hover__color;
+        color: desaturate(darken($highlight-pink__color, 4%), 1%);
     }
     &:hover + .catalog-page_1{
-        color: $catalog-page__and__checkbox-bd__color;
+        color: lighten($secondary-grey__color, 49%);
     }
     order:8;    
 }
-
 

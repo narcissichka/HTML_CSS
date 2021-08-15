@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping cart</title>
+    <title>Registration</title>
     <link rel="icon" href="image/logo.svg" type="image/svg">
     <script src="https://kit.fontawesome.com/890dd60a78.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/style.css" media="print" onload="this.media='all'">
@@ -66,7 +66,7 @@
                                     </ul>
                                 </div>
                             </nav>
-                            <a href="checkout.html"><img class="account icon" src="image/account.svg" alt="account"></a>
+                            <a href="#"><img class="account icon" src="image/account.svg" alt="account"></a>
                             <a href="cart.html" class="cart"><img class="carticon" src="image/cart.svg" alt="cart"></a>
 
                         </div>
@@ -75,76 +75,45 @@
             </header>
             <header class="catalog-head">
                 <div class="container catalog-header">
-                    <h2 class="catalog-header__heading">shopping cart</h2>
+                    <h2 class="catalog-header__heading">registration</h2>
                 </div>
             </header>
             <main>
-                <div class="cart-page container">
-                    <section class="cart-content">
-                        <div class="cart-content__items">
-                            <div class="cart-content__item">
-                                <img src="image/cart-item1.png" class="cart-content__item-img" alt="">
-                                <div class="cart-content__item-info">
-                                    <h2 class="cart-content__item-info__header">MANGO PEOPLE T&#8209;SHIRT
-                                    </h2>
-                                    <p class="cart-content__item-info__details">
-                                        price: <span class="cart-content__item-info__details-price">300$</span> <br>
-                                        color: <span class="cart-content__item-info__details-item">red</span> <br>
-                                        size: <span class="cart-content__item-info__details-item">xl</span> <br>
-                                        quantity: <input type="number" placeholder="2" min="1">
-                                    </p>
-                                </div>
-                                <a href="#" class="cart-content__item-close"><img src="image/close-cart.svg"
-                                        alt="close icon"></a>
-                                <div class="cart-content__item-hover"></div>
-                            </div>
-                            <div class="cart-content__item">
-                                <img src="image/cart-item2.png" class="cart-content__item-img" alt="">
-                                <div class="cart-content__item-info">
-                                    <h2 class="cart-content__item-info__header">MANGO PEOPLE T&#8209;SHIRT
-                                    </h2>
-                                    <p class="cart-content__item-info__details">
-                                        price: <span class="cart-content__item-info__details-price">300$</span> <br>
-                                        color: <span class="cart-content__item-info__details-item">red</span> <br>
-                                        size: <span class="cart-content__item-info__details-item">xl</span> <br>
-                                        quantity: <input type="number" placeholder="2" min="1">
-                                    </p>
-                                </div>
-                                <a href="#" class="cart-content__item-close"><img src="image/close-cart.svg"
-                                        alt="close icon"></a>
-                                <div class="cart-content__item-hover"></div>
-                            </div>
-                        </div>
-                        <div class="cart-content__buttons">
-                            <a href="#" class="button button_cartpage">clear shopping cart</a>
-                            <a href="catalog.html" class="button button_cartpage">continue shopping</a>
-                        </div>
-                    </section>
-                    <section class="cart-info">
-                        <form action="checkout.html">
-                            <div class="cart-info__adress">
-                                <h3 class="cart-info__adress-header">shipping adress</h3>
-                                <input type="text" class="cart-info__adress-country" inputmode="latin-prose"
-                                    placeholder="bangladesh">
-                                <input type="text" class="cart-info__adress-city" inputmode="latin-prose"
-                                    placeholder="state">
-                                <input type="text" class="cart-info__adress-zip" inputmode="numeric"
-                                    placeholder="postcode / zip">
-                                <a href="#" class="button button_cartpage button_quote">GET A QUOTE</a>
-                            </div>
-                            <div class="cart-info__checkout">
-                                <p class="cart-info__checkout-sub">sub
-                                    total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$900</p>
-                                <br>
-                                <h3 class="cart-info__checkout-header">grand
-                                    total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                        class="cart-info__checkout-grand">$900</span>&nbsp;</h3>
-                                <span class="cart-info__checkout-hline"></span>
-                                <button type="submit" class="button button_checkout" value="checkout">
-                                    proceed to checkout
-                                </button>
-                            </div>
+                <div class="checkout container">
+                    <section class="registration">
+                        <form action="#" class="registration-form">
+                            <h4 class="registration-heading">your name</h4>
+                            <input type="text" class="registration-input" placeholder="first name">
+                            <input type="text" class="registration-input" placeholder="last name">
+                            <input type="radio" name="sex" value="male" id="radio-male"
+                                class="custom-radio registration-radio">
+                            <label for="radio-male">male</label>
+                            <input type="radio" name="sex" value="female" id="radio-female"
+                                class="custom-radio registration-radio">
+                            <label for="radio-female">female</label>
+                            <h4 class="registration-heading">login details</h4>
+                            <input type="email" class="registration-input" placeholder="email">
+                            <input type="password" class="registration-input" placeholder="password">
+                            <p class="registration-passwordParametersText">Please use 8 or more characters, with at
+                                least 1 number and a mixture of uppercase and lowercase letters</p>
+                            <button type="submit" class="button registration__button button_join">join now <img
+                                    class="registration-button__img" src="image/arrow-join.svg" alt="join now"></button>
                         </form>
+                    </section>
+                    <section class="loyalty">
+                        <h3 class="loyalty-heading">LOYALTY HAS ITS PERKS</h3>
+                        <p class="loyalty-text">Get in on the loyalty program where you can earn points and unlock
+                            serious perks. Starting with these as soon as you join:</p>
+                        <ul class="loyalty-list">
+                            <li class="loyalty-item">15% off welcome offer
+                            </li>
+                            <li class="loyalty-item">Free shipping, returns and exchanges on all orders
+                            </li>
+                            <li class="loyalty-item">$10 off a purchase on your birthday
+                            </li>
+                            <li class="loyalty-item">Early access to products</li>
+                            <li class="loyalty-item">Exclusive offers &amp; rewards</li>
+                        </ul>
                     </section>
                 </div>
             </main>

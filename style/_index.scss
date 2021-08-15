@@ -1,21 +1,18 @@
-// banner
 .introduction{
-    display: flex;
-    align-items: center;
     background-color: $introduction-bg__color;
+    &_{
+        display: flex;
+        align-items: center;
+    }
     &-intro{
         display: flex;
     }
     &-text{
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 38px;
+        @include font(700, 32px, 38px, normal);
         color: $dark-color;
         text-transform: uppercase;
         &__header{
-            font-weight: 900;
-            font-size: 48px;
-            line-height: 58px;
+            @include font(900, 48px, 58px, normal);
         }
         &__fashion{
             color: $highlight-pink__color;
@@ -33,9 +30,7 @@
     padding-top: 65px;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    @include font(400, 16px, 19px, normal);
     &-part1{
         display: flex; //a{display:block;}
         justify-content: space-between;
@@ -45,10 +40,15 @@
             position: relative;
             text-decoration: none;
             color:$offers-text__color;
+            transition: transform 0.3s linear;
             &>p{
                 position:relative;
                 top:40%;
                 z-index: 2;
+            }
+            &:hover{
+                transform: scale(1.1);
+                z-index: 1;
             }
         }
     }
@@ -61,10 +61,14 @@
             position: relative;
             text-decoration: none;
             color:$offers-text__color;
+            transition: transform 0.3s linear;
             &>p{
                 position:relative;
                 top:40%;
                 z-index: 2;
+            }
+            &:hover{
+                transform: scale(1.1);
             }
         }
     }
@@ -93,9 +97,7 @@
         background-size: cover;
     }
     &-headtext{
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 29px;
+        @include font(700, 24px, 29px, normal);
         color: $highlight-pink__color;
     }
 }
@@ -108,14 +110,18 @@
         text-align: center;
     }
     &-header{
-        font-size: 30px;
-        line-height: 36px;
+        @include font(bold, 30px, 36px, normal);
         color: $dark-color;
     }
     &-text{
-        font-size: 14px;
-        line-height: 17px;
-        color: $fetured-text__color;
+        @include font(normal, 14px, 17px, normal);
+        color: lighten($secondary-grey__color, 19%);
     }
-    
+}
+.items{
+    //Element
+    &__button{
+        align-self: center;
+	    display: inline-block;
+    }
 }
