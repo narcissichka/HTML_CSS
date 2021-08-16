@@ -82,19 +82,9 @@
                 @include font(300, 16px, 19px, normal);
                 color: $dark-color;
             }
-            &>input{
-                height: 45px;
+            .cart-info__input{
                 margin-bottom: 21px;
                 padding-left:17px;
-                text-transform: capitalize;
-                @include font(300, 13px, 16px, normal);
-                border: 1px solid lighten($secondary-grey__color, 21%);
-            }
-            &>input::placeholder{
-                color: $dark-color;
-            }
-            &>input:first-of-type::placeholder{
-                color: lighten($secondary-grey__color, 26%);
             }
         }
 
