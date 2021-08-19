@@ -1,45 +1,46 @@
 .checkout{
-    margin-block: 64px 96px;
+    margin-block: 4.28vw 6.42vw;
     display: flex;
     .registration, .loyalty{
         margin-inline: auto;
     }
     .registration{
-        width: $block-width;
+        width: 31.58%;
         &-heading{
-            margin-bottom: 21px;
+            margin-bottom: 1.4vw;
             text-transform: capitalize;
-            @include font(300, 16px, 19px, normal);
+            @include font(300, 1.07vw, 118.75%, normal);
             color: $dark-color;
             &:last-of-type{
-                margin-top: 35px;
+                margin-top: 2.34vw;
             }
         }
         //Element
         &__input{
             display: block;
-            margin-bottom: 21px;
-            padding-left:17px;
+            margin-bottom: 1.4vw;
+            padding-left: 4.72%;
             &:last-of-type{
-                    margin-bottom: 16px;
+                    margin-bottom: 1.07vw;
                 }
         }
         &-radio{
             &+label{
                 text-transform: capitalize;
-                margin-right: 20px;
-                @include font(300, 11px, 13px, normal);
+                margin-right: 5.56%;
+                @include font(300, 0.74vw, 118.18%, normal);
             }
         }
         &-passwordParametersText{
-            @include font(300, 13px, 16px, normal);
+            @include font(300, 0.87vw, 123.08%, normal);
             color: lighten($secondary-grey__color, 26%);
         }
         //Element
         &__button{
-            margin-top: 40px;
+            margin-top: 2.67vw;
             .registration-button__img{
-                margin-left: 20px;
+                width: 1.09vw;
+                margin-left: 1.34vw;
                 transition: filter 0.2s linear;
             }
             &:hover .registration-button__img{
@@ -48,26 +49,30 @@
         }
     }
     .loyalty{
-        margin-left: 128px;
-        width: 650px;
+        margin-left: 11.23%;
+        width: 57.02%;
         &-heading, &-text, &-list{
-            margin-bottom: 21px;
-            @include font(300, 24px, 29px, normal);
+            margin-bottom: 1.4vw;
+            @include font(300, 1.6vw, 120.83%, normal);
         }
         &-heading{
             text-transform: uppercase;
         }
-        &-list{
-            margin-left: 25px;
-            list-style-type: none;
-            list-style-image: url("../image/list-img.svg");
-        }
         &-item{
-            margin-bottom: 16px;
-            padding-left: 23px;
+            margin-left: 0;
+            margin-bottom: 1.07vw;
+            padding-left: 7%;
+            list-style: none;
+            background-image: url("../image/list-img.svg");
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 1.34vw;
             &:last-of-type{
                 margin-bottom: 0;
             }
+            // &::marker{
+            //     width: 1.34vw; 
+            // }
         }
     }
 }

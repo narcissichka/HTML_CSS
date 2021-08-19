@@ -36,6 +36,7 @@ body{
 	text-decoration: none;
 	background-color: $highlight-pink__color;
 	color: $button-text__color;
+    @include font(400, 1.07vw, 121.43%, normal);
 	border: 1px solid lighten(saturate($highlight-pink__color, 17%), 1%);
 	transition: all 0.2s linear;
 	text-align: center;
@@ -43,61 +44,60 @@ body{
         color: darken(saturate($highlight-pink__color, 1%), 1%);
         background-color: $button-text__color;
     }
-
+   
     //Modifications
 
     //common
     &_search{
-        height:40px;
-        width:45px;
-        border-radius: 0 5px 5px 0;
+        height:2.67vw;
+        width:3.01vw;
+        border-radius: 0 0.33vw 0.33vw 0;
         transition: color 0.2s linear, background-color 0.2s linear;
     }
     &_subscribe{
-        width: 100px;
-        border-radius: 0 25px 25px 0;
-        @include font(normal, 14px, 17px, normal);
+        width: 30%;
+        border-radius: 0 1.67vw 1.67vw 0;
         &:hover{
             background-color: lighten($secondary-grey__color, 52%);
         }
     }
     &_socialmedia{
-        width:32px;
-        height:32px;
+        width:2.14vw;
+        height:2.14vw;
         color: $dark-color;
         background-color: lighten($secondary-grey__color, 55%);
         border: none;
-        @include font(normal, 15px, 32px, normal);    
+        @include font(normal, 1vw, 213.33%, normal);    
         &:hover{
             background-color: $highlight-pink__color;
             color: lighten($secondary-grey__color, 55%);
         }
     }
     &_add-item-to-cart{
-        width: 123px;
-        height: 39px;
-        font-size: 16px;
+        width: 8.22vw;
+        height: 2.61vw;
+        font-size: 1.07vw;
 		background-color: transparent;
         border-color: $button-text__color;
         &:hover{
 			color: $button-text__color;
 			background-color: transparent;
-            box-shadow: 0 0 10px $button-text__color;
+            box-shadow: 0 0 0.67vw $button-text__color;
         }
     }
 
     //index-page
     &_browse-all{
-        width: 211px;
-        height:47px;
-        @include font(normal, 16px, 47px, normal);
+        width: 14.1vw;
+        height:3.14vw;
+        @include font(normal, 1.07vw, 293.75%, normal);
     }
     //cart-page
     &_cartpage{
-        width: 225px;
-        height: 50px;
+        width: 15.04vw;
+        height: 3.34vw;
         text-transform: uppercase;
-        @include font(300, 14px, 50px, normal);
+        @include font(300, 0.94vw, 357.14%, normal);
         color: $dark-color;
 		background-color: transparent;
         border: 1px solid lighten($secondary-grey__color, 21%);
@@ -107,16 +107,16 @@ body{
         }
     }
     &_quote{
-        width: 100px;
-        height: 34px;
-        @include font(300, 11px, 34px, normal);
+        width: 6.68vw;
+        height: 2.27vw;
+        @include font(300, 0.74vw, 309.09%, normal);
         color: darken($secondary-grey__color, 14%);
     }
     &_checkout{
-        width:275px;
-        height: 50px;
+        width: 18.38vw;
+        height: 3.34vw;
         text-transform: uppercase;
-        @include font(300, 16px, 50px, normal);
+        @include font(300, 1.07vw, 312.5%, normal);
         &:hover{
             background-color: lighten($secondary-grey__color, 52%);
         }
@@ -124,24 +124,24 @@ body{
 
     //product-page
     &_add-product-to-cart{
-        width:211px;
-        height:47px;
+        width:14.1vw;
+        height:3.14vw;
     }
 
     //checkout-page
     &_join{
-        width: 167px;
-        height: 50px;
+        width: 11.16vw;
+        height: 3.34vw;
         text-transform: uppercase;
-        @include font(normal, 14px, 17px, normal);
+        // @include font(normal, 0.94vw, 121.43%, normal);
     }
 }
 //Block
 .input{
     width: 100%;
-    height: 45px;
+    height: 3.01vw;
     text-transform: capitalize;
-    @include font(300, 13px, 16px, normal);
+    @include font(300, 0.87vw, 123.08%, normal);
     border: 1px solid lighten($secondary-grey__color, 21%);
     color: $dark-color;
     &::placeholder{
@@ -159,29 +159,66 @@ body{
 .header{
     background-color: $dark-color;
     &-content{
-        height: 75px;
+        height: 5.014vw;
         @extend .flex-container;
         &__left{
+            height:100%;
             display: flex;
+            align-items: center;
             &>a:first-of-type{
-                margin-right: 41px;
+                margin-right: 2.74vw;
             }
-            .search{
-                padding-top: 5px;
-                transition: visibility 0s, opacity 0.5s linear;
+            .logo{
+                width:3.343vw;
             }
         }
         &__right{
+            width: 12%;
+            height:100%;
             display: flex;
-            &>a{
-                margin-right: 33px;
+            align-items: center;
+            &>a:first-of-type{
+                margin-inline: 14.6%;
             }
-            &>a:last-of-type{
-                margin-right: 0;
+            &>a{
+                & img{
+                    width: 2.197vw;
+                }
             }
         }
         &__search{
             position: relative;
+            display: flex;
+            .search{
+                width: 2.197vw;
+                padding-top: 0.33vw;
+                transition: visibility 0s, opacity 0.5s linear;
+            }
+            .search-form{
+                position: absolute;
+                top:-1.45vw;
+                left:0;
+                display: flex;
+                visibility: hidden;
+                opacity:0;
+                transition: visibility 0s, opacity 0.5s linear;
+                .search-input{
+                    height:2.67vw;
+                    padding-left: 0.67vw;
+                    border: 0.13vw solid $highlight-pink__color;
+                    border-radius: 0.33vw 0 0 0.33vw;
+                    @include font(300, 0.87vw, 123.08%, normal);
+                }
+                .search-button{
+                    .search-icon{
+                        width: 2.197vw;
+                        transition: filter 0.2s linear;
+                    }
+                    &:hover .search-icon{
+                        filter: invert(60%) sepia(51%) saturate(3302%) hue-rotate(313deg) brightness(91%) contrast(107%);
+                    }
+                }
+            }
             &:hover .search{
                 visibility: hidden;
                 opacity: 0;
@@ -198,17 +235,17 @@ body{
     }
     .cart{
         position: relative;
+        display: flex;
         &:hover::after{
             content:'5';
             display: block;
             position:absolute;
-            top:0;
             right:0;
             z-index: 3;
-            width: 14px;
-            height: 14px;
-            border-radius: 7px;
-            @include font(normal, 10px, 14px, normal);
+            width: 0.94vw;
+            height: 0.94vw;
+            border-radius: 0.47vw;
+            @include font(normal, 0.67vw, 140%, normal);
             text-align: center;
             color: $button-text__color;
             background-color: $highlight-pink__color;
@@ -216,51 +253,27 @@ body{
     }
 }
 
-.search-form{
-    position: absolute;
-    top:0;
-    left:0;
-    display: flex;
-    visibility: hidden;
-    opacity:0;
-    transition: visibility 0s, opacity 0.5s linear;
-    .search-input{
-        height:40px;
-        padding-left: 10px;
-        border: 2px solid $highlight-pink__color;
-        border-radius: 5px 0 0 5px;
-    }
-    .search-button{
-        .search-icon{
-            transition: filter 0.2s linear;
-        }
-        &:hover .search-icon{
-            filter: invert(60%) sepia(51%) saturate(3302%) hue-rotate(313deg) brightness(91%) contrast(107%);
-        }
-    }
-}
 .menu-navigation{
     position:relative;
     z-index: 2;
     .menu{
-        position:relative;
-        margin-right: 33px;
-        padding-top: 5px;
+        padding-top: 20%;
+        width: 2.197vw;
     }
     .nav{
-        width:232px;
-        height:600px;
+        width:15.51vw;
+        height:40.11vw;
         visibility: hidden;
         opacity: 0;
         transition: visibility 0s, opacity 0.5s linear;
         position:absolute;
         background-color: $navigation-bg__color;
-        box-shadow: 5px 10px 20px $shadow-color;
-        @include font(normal, 14px, 17px, normal);
+        box-shadow: 0.33vw 0.67vw 1.34vw $shadow-color;
+        @include font(normal, 0.94vw, 121.43%, normal);
         &-header{
             text-transform: uppercase;
             font-weight: 700;
-            margin: 9px 0 0 33px;
+            margin: 3.44% 0 0 12.6%;
         }
         &-list, &-list_{
             list-style-type: none;
@@ -270,7 +283,7 @@ body{
             text-transform: uppercase;
             color: $highlight-pink__color;
             display: inline-block;
-            margin: 24px 0 0 33px;
+            margin: 9.16% 0 0 12.6%;
             transition: color 0.2s linear;
             &:hover{
                 color: lighten($secondary-grey__color, 19%);
@@ -281,7 +294,7 @@ body{
             text-transform: capitalize;
             color: $secondary-grey__color;
             display: inline-block;
-            margin: 7px 0 7px 54px;
+            margin: 2.67% 0 2.67% 20.61%;
             transition: color 0.2s linear;
             &:hover{
                 color: lighten($secondary-grey__color, 19%);
@@ -291,11 +304,15 @@ body{
             margin-bottom: 0;
         }
         .close{
+            width: 4.58%;
             align-self: flex-end;
-            margin: 16px 16px 0 0;
+            margin: 6.11% 6.11% 0 0;
             transition: filter 0.2s linear;
             &:hover{
                 filter: brightness(119%);
+            }
+            &-icon{
+                width: 100%;
             }
         }
     }
@@ -308,35 +325,19 @@ body{
 }
 //common for catalog and index
 .items{
-    margin-top: 49px;
-    margin-bottom: 48px;
+    margin-block: 4.3%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
         .item{
             text-decoration: none;
             background-color: lighten($secondary-grey__color, 54%);
-            &-text{
-                margin: 12px 16px 0 16px;
-                @include font(300, 14px, 17px, normal);
-                color: lighten(darken($secondary-grey__color, 8%), 1%);
-            }
-            &-header{
-                margin: 25px 0 0 16px;
-                @include font(bold, 13px, 16px, normal);
-                color: #000;
-            }
-            &-price{
-                margin: 18px 0 20px 16px;
-                @include font(normal, 16px, 19px, normal);
-                color: $highlight-pink__color;
-            }
-
             &-box{
-                width: $block-width;
-                margin-bottom: 30px;
+                width: 31.58%;
+                margin-bottom: 2.63%;
                 position: relative;
                 transition: box-shadow 0.2s linear;
+                background-color: lighten($secondary-grey__color, 54%);
                 .item-img{
                     transition: filter 0.2s linear;
                 }
@@ -348,66 +349,93 @@ body{
                     filter: brightness(30%);
                 }
                 &:hover{
-                    box-shadow: 5px 10px 20px $shadow-color;
+                    box-shadow: 0.33vw 0.67vw 1.34vw $shadow-color;
                 }
             }
+            &-text{
+                margin: 3.33% 4.44% 0 4.44%;
+                @include font(300, 0.94vw, 121.43%, normal);
+                color: lighten(darken($secondary-grey__color, 8%), 1%);
+            }
+            &-header{
+                margin: 6.94% 0 0 4.44%;
+                @include font(bold, 0.87vw, 123.08%, normal);
+                color: #000;
+            }
+            &-price{
+                margin: 5% 0 5.56% 4.44%;
+                @include font(normal, 1.07vw, 118.75%, normal);
+                color: $highlight-pink__color;
+            }
+
             &-cart{
                 width: 100%;
                 display: none;
                 position: absolute;
-                top: 150px;
+                top: 25.73%;
                 //Element
                 &-add__button{
                     display: flex;
                     align-items: center;
-	                padding: 7px;
+	                padding: 1.94%;
                 }
                 &__add-txt{
-                        padding-left: 7px;
+                        padding-left: 1.94%;
                 }
+            }
+            &>img{
+                width: 100%;
             }
             
         }
 }
 .information{
-    margin-top: 95px;
+    margin-top: 6.35vw;
     background-color: $dark-color;
     &-container{
-        height: 341px;
+        min-height: 22.79vw;
         @extend .flex-container;
         text-align: center;
         color: lighten($secondary-grey__color, 55%);
     }
     &-cell{
-        max-width:300px;
+        width:26.32%;
     }
     &-header{
-        @include font(normal, 20px, 24px, normal);
-        margin-top: 20px;
+        @include font(normal, 1.34vw, 120%, normal);
+        margin-top: 5.87%;
     }
     &-text{
-        @include font(300, 14px, 17px, normal);
-        margin-top: 16px;
+        @include font(300, 0.94vw, 121.43%, normal);
+        margin-top: 4.07%;
+    }
+    &-logo{
+        width: 16.67%;
     }
 }
 .footer{
     &-upper{
         position: relative;
-        height: 448px;
+        min-height: 29.95vw;
         background: url("../image/footer-upper__bg.jpg") no-repeat center center;
+        background-size: cover;
         &__container{
-            padding-top: 86px;
+            padding-top: 5.75vw;
             position:relative;
+            height: 100%;
             z-index: 2;
             @extend .flex-container;
             text-align: center;
             .review{
-                max-width: $block-width;
+                width: 31.58%;
                 transition: transform 1s cubic-bezier(.54,.05,1,.99);
                 &-text{
-                    margin-top: 30px;
-                    @include font(normal, 20px, 24px, italic);
+                    margin-top: 6.7%;
+                    @include font(normal, 1.34vw, 120%, italic);
                     color: $dark-color;
+                }
+                &-icon{
+                    width: 26.67%;
                 }
                 &:hover{
                     transform:rotate(360deg);
@@ -416,25 +444,25 @@ body{
             .subscription{
                 &-header{
                     text-transform: uppercase;
-                    @include font(700, 24px, 40px, normal);
+                    @include font(700, 1.6vw, 166.67%, normal);
                 }
                 &-text{
                     text-transform: uppercase;
-                    @include font(400, 18px, 30px, normal);
+                    @include font(400, 1.2vw, 166.67%, normal);
                 }
                 &-form{
-                    margin-top: 32px;
+                    margin-top: 7.14%;
                     display: flex;
                     &__input{
-                        width: 256px;
-                        height: 50px;
+                        width: 70%;
+                        height: 3.34vw;
                         background-color: lighten($secondary-grey__color, 45%);
                         border: none;
-                        border-radius: 25px 0 0 25px;
-                        padding-left: 22px;
+                        border-radius: 1.67vw 0 0 1.67vw;
+                        padding-left: 1.47vw;
                         color: $dark-color;
                         opacity: 0.67;
-                        @include font(normal, 14px, 17px, normal);
+                        @include font(normal, 0.94vw, 121.43%, normal);
                         &:focus, &:active, &:hover{
                             outline: 0;
                             outline-offset: 0;
@@ -457,17 +485,17 @@ body{
     &-lower{
         background-color: $dark-color;
         &__container{
-            height: 80px;
+            height: 5.35vw;
             @extend .flex-container;
             .footer-lower__text{
-                @include font(normal, 16px, 19px, normal);
+                @include font(normal, 1.07vw, 118.75%, normal);
                 color: lighten($secondary-grey__color, 55%);
             }
             .socialmedia{
                 display: flex;
                 //Element
                 &__button{
-                    margin-right: 8px; 
+                    margin-right: 0.53vw; 
                     &:last-of-type{
                         margin-right: 0;
                     }
@@ -479,18 +507,18 @@ body{
 .catalog-head{
     background-color: $catalog-head__and__checkbox-bg__color;
     &er{
-        height: 148px;
+        height: 8.29vw;
         @extend .flex-container;
         &__heading{
             text-transform: uppercase;
-            @include font(400, 24px, 29px, normal);
+            @include font(400, 1.6vw, 120.83%, normal);
             color: $highlight-pink__color;
         }
         .breadcrumbs{
+            @include font(300, 0.94vw, 121.43%, normal);
             &-link{
                 text-transform: uppercase;
                 text-decoration: none;
-                @include font(300, 14px, 17px, normal);
                 color: saturate(darken($secondary-grey__color, 5%), 1%);
             }
             &-link:last-of-type{
@@ -505,8 +533,8 @@ body{
     z-index: 1;
     display: flex;
     &>details{
-        position:relative;
-        margin-right: 30px;
+        position: relative;
+        margin-right: 2.63%;
     }
     &>details:last-of-type{
         margin-right: 0;
@@ -515,7 +543,7 @@ body{
     &-summary{
         position: relative;
         text-transform: uppercase;
-        @include font(normal, 14px, 17px, normal);
+        @include font(normal, 0.94vw, 121.43%, normal);
         color: $secondary-grey__color;
         list-style-type: none;
         transition: color 0.2s linear;
@@ -523,13 +551,13 @@ body{
             content:"";
             display:inline-block;
             position: absolute;
-            top:2px;
-            margin-left: 10px;
-            width: 5px;
-            height: 5px;
+            top:0.13vw;
+            margin-left: 0.67vw;
+            width: 0.33vw;
+            height: 0.33vw;
             transform: rotate(45deg);
-            border-bottom: 2px solid $secondary-grey__color;
-            border-right: 2px solid $secondary-grey__color;
+            border-bottom: 0.13vw solid $secondary-grey__color;
+            border-right: 0.13vw solid $secondary-grey__color;
         }
         &:hover{
             color: lighten($secondary-grey__color, 19%);
@@ -537,12 +565,13 @@ body{
     }
     &-variants{
         position:absolute;
+        @include font(300, 0.94vw, 121.43%, normal);
         padding-top:0.5em;
         padding-left: 0.5em;
         padding-bottom: 0.7em;
         list-style-type: none;
         background-color: $navigation-bg__color;
-        box-shadow: 5px 10px 20px $shadow-color;
+        box-shadow: 0.33vw 0.67vw 1.34vw $shadow-color;
         color: $secondary-grey__color;
         .size-variant{
             text-transform: uppercase;
@@ -573,17 +602,17 @@ body{
     background-size: 50% 50%;
 }
 .custom-checkbox+label::before{
-    width: 12px;
-    height: 12px;
+    width: 0.8vw;
+    height: 0.8vw;
     margin-right: 0.5em;
     border: 1px solid lighten($secondary-grey__color, 49%);
     transition: all 0.2s linear;
 }
 .custom-radio+label::before{
-    width: 14px;
-    height: 14px;
-    margin-right: 10px;
-    border-radius: 8px;
+    width: 0.94vw;
+    height: 0.94vw;
+    margin-right: 0.67vw;
+    border-radius: 0.53vw;
     border: 1px solid lighten($secondary-grey__color, 21%);
     transition: all 0.2s linear;
 }
@@ -621,4 +650,362 @@ body{
     background-color: lighten($secondary-grey__color, 48%);
 }
 
- 
+@media screen and (max-width:768px){
+   .container{
+       max-width: 95.7vw; 
+   }
+   .button{
+        @include font(400, 2.08, 121.43%, normal);
+       &_search{
+            height:5.2vw;
+            width: 5.3vw;
+       }
+       &_subscribe{
+           font-size: 14px;
+           border-radius: 0 3.25vw 3.25vw 0;
+       }
+       &_socialmedia{
+           width: 4.17vw;
+           height: 4.17vw;
+           line-height: 4.17vw;
+       }
+       &_add-item-to-cart{
+            width: 16.02vw;
+            height: 5.08vw;
+            font-size: 15px;
+       }
+       &_browse-all{
+           font-size: 16px;
+           width: 27.47vw;
+           height: 6.12vw;
+           line-height: 6.12vw;
+       }
+       &_cartpage{
+            width: 29.3vw;
+            height: 6.51vw;
+            font-size: 14px;
+            line-height: 6.51vw;
+        }
+        &_quote{
+            width: 13.02vw;
+            height: 4.43vw;
+            line-height: 4.43vw;
+            font-size: 11px;
+        }
+        &_checkout{
+            width: 35.81vw;
+            height: 6.51vw;
+            font-size: 16px;
+            line-height: 6.51vw;
+        }
+        &_add-product-to-cart{
+            width: 27.47vw;
+            height: 6.12vw;
+        }
+        &_join{
+            width: 21.74vw;
+            height: 6.51vw;
+        }
+   }
+   .input{
+       font-size: 13px;
+       height: 5.86vw;
+   }
+   .items{
+       margin-block: 9.64vw 0;
+       .item{
+           &-box{
+               width: 49.05%;
+           }
+           &-text{
+               font-size: 14px;
+           }
+           &-header{
+               font-size: 13px;
+           }
+           &-price{
+               font-size: 16px;
+           }
+       }
+   }
+   .information{
+       &-container{
+           flex-direction: column;
+       }
+        &-cell{
+            width: 42.07%;
+            margin-bottom: 6.25vw;
+            &:first-of-type{
+                margin-top: 6.25vw;
+            }
+            &:last-of-type{
+                margin-bottom: 8.33vw;
+            }
+        }
+        &-header{
+            font-size: 20px;
+        }
+        &-text{
+            font-size: 14px;
+        }
+
+   }
+   .footer-upper{
+       background-position: 25% 0;
+       background-size: 2142px 600px;
+   }
+    .footer-upper__container{
+       padding-block: 7.03vw 18.23vw;
+       flex-direction: column;
+       .review{
+           width: 46.88%;
+           margin-bottom: 6.25vw;
+           &-text{
+              font-size: 20px;
+           }
+       }
+       .subscription{
+           &-header{
+               font-size: 24px;
+           }
+           &-text{
+               font-size: 18px;
+           }
+           &-form{
+               &__input{
+                    height: 6.51vw;
+                    border-radius: 3.26vw 0 0 3.26vw;
+                    padding-left: 2.86vw;
+                    font-size: 14px;
+               }
+           }
+       }
+    }
+    .footer-lower{
+        &__container{
+            height: 10.42vw;
+            .footer-lower__text{
+                font-size: 16px;
+            }
+        }
+        .socialmedia__button{
+            margin-right: 1.04vw; 
+                &:last-of-type{
+                    margin-right: 0;
+                }
+        }
+    }
+    .header{
+        &-content{
+            height: 9.64vw;
+            &__left{
+                &>a:first-of-type{
+                    margin-right: 5.34vw;
+                }
+                .logo{
+                    width:5.73vw;
+                }
+            }
+            &__right{
+                width: 20%;
+                &>a{
+                    & img{
+                        width: 4.17vw;
+                    }
+                }
+            }
+            &__search{
+                .search{
+                    width: 3.39vw;
+                    padding-top: 1vw;
+                }
+                .search-form{
+                    top:-2.5vw;
+                    .search-input{
+                        height: 5.21vw;
+                        padding-left: 1.3vw;
+                        @include font(300, 13px, 123.08%, normal);
+                    }
+                    .search-button{
+                        .search-icon{
+                            width: 4.3vw;
+                        }
+                    }
+                }
+            }
+        }
+        .cart{
+            &:hover::after{
+                width: 1.82vw;
+                height: 1.82vw;
+                border-radius: 0.91vw;
+                @include font(normal, 10px, 140%, normal);
+            }
+        }
+    }
+    .menu-navigation{
+        .menu{
+            width: 4.3vw;
+        }
+        .nav{
+            width: 18.21vw;
+            height: 54.13vw;
+            @include font(normal, 11px, 121.43%, normal);
+
+        }
+    }
+
+}
+@media screen and (max-width:376px){
+    .container{
+        max-width: 91.47vw;
+    }
+    .button{
+       &_search{
+            height:10.67vw;
+            width: 10.93vw;
+       }
+       &_browse-all{
+           width:  56.27vw;
+           height: 12.53vw;
+           line-height: 12.53vw;
+       }
+       &_subscribe{
+            border-radius: 0 6.67vw 6.67vw 0;
+        }
+        &_socialmedia{
+            width: 8.53vw;
+            height: 8.53vw;
+            line-height: 8.53vw;
+        }
+        &_add-item-to-cart{
+            width: 36.8vw;
+            height: 11.47vw;
+            font-size: 14px;
+       }
+   }
+    .header{
+        &-content{
+            height:19.73vw;
+            &__left{
+                &>a:first-of-type{
+                    margin-right: 10.93vw;
+                }
+                .logo{
+                    width: 11.73vw;
+                }
+            }
+            &__right{
+                width:9.33%;
+                & > a:first-of-type, & > a:last-of-type{
+                    display: none;
+                }
+            }
+            &__search{
+                .search{
+                    width: 6.93vw;
+                }
+                .search-form{
+                    top:-5vw;
+                    .search-input{
+                        height: 10.67vw;
+                        width: 26.67vw;
+                        padding-left: 2.67vw;
+                        font-size: 11px;
+                    }
+                    .search-button{
+                        .search-icon{
+                            width: 9vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   .menu-navigation{
+       .menu{
+           padding: 0;
+           width: 8.53vw;
+       }
+       .nav{
+           .close{
+               display: none;
+           }
+           left:-21vw;
+           width: 30vw;
+           height: 77vw;
+           line-height: 100%;
+       }
+
+   }
+   .items{
+    margin-block: 17.07vw 2.67vw;
+        .item{
+            &-box{
+                width: 100%;
+            }
+            &-cart__add-txt{
+                margin-left: 2.93vw;
+            }
+        }
+    }
+    .information{
+        margin-top:25.6vw;
+        &-cell{
+            width: 90%;
+            margin-bottom: 12.53vw;
+            &:first-of-type{
+                margin-top: 12.8vw;
+            }
+            &:last-of-type{
+                margin-bottom: 21.6vw;
+            }
+        }
+    }
+    .footer-upper{
+        &__container{
+            padding-block: 14.4vw 29.33vw;
+            width: 100%;
+            .review{
+                width: 90%;
+                margin-bottom: 15.73vw;
+                &-text{
+                    font-size:18px;
+                }
+            }
+            .subscription{
+                &-text{
+                    font-size: 14px;
+                }
+                &-form{
+                    &__input{
+                         height: 13.33vw;
+                         border-radius: 6.67vw 0 0 6.67vw;
+                         padding-left: 5.87vw;
+                    }
+                }
+            }
+        }
+    }
+    .footer-lower{
+        &__container{
+            height: 38.13vw;
+            flex-direction: column;
+            place-content: center;
+        }
+        .socialmedia{
+            order:1;
+            margin-top: 11.47vw;
+            &__button{
+                margin-right: 2.13vw;
+                &:last-of-type{
+                    margin-right: 0;
+                }
+            }
+        }
+        &__text{
+            order:2;
+            margin-block: 10.67vw 2.4vw;
+        }
+    }
+}

@@ -1,13 +1,13 @@
 .filters{
-    margin-top: 50px;
+    margin-top: 3.34vw;
     .filter{
-        width: $block-width;
-        margin-left: 15px;
-        margin-right: 30px;
+        width: 31.58%;
+        margin-left: 1.32%;
+        margin-right: 2.63%;
         text-transform: uppercase;
-        @include font(600, 14px, 17px, normal);
-        left:-15px;
-        padding-left: 15px;
+        @include font(600, 0.94vw, 121.43%, normal);
+        left:-1.32%;
+        padding-left: 1.32%;
         &-summary{
             list-style-type: none;
             transition: color 0.2s linear;
@@ -16,23 +16,23 @@
             width:100%;
             position: absolute;
             left:0;
-            padding-left: 15px;
+            padding-left: 4.17%;
             list-style-type: none;
             background-color: $navigation-bg__color;
-            box-shadow: 5px 20px 20px $shadow-color;
+            box-shadow: 0.33vw 1.34vw 1.34vw $shadow-color;
         }
         &-option{
-            margin-top: 18px;
+            margin-top: 1.2vw;
             &:last-of-type{
-                margin-bottom: 18px;
+                margin-bottom: 1.2vw;
             }
             &>span{
                 display: inline-block;
-                height:37px;
-                width: 326px;
-                @include font(normal, 14px, 37px, normal);
-                padding-left: 11px;
-                border-left: 5px solid desaturate(darken($highlight-pink__color, 4%), 1%);
+                height:3.47vw;
+                width: 90.56%;
+                @include font(normal, 0.94vw, 3.47vw, normal);
+                padding-left: 3.37%;
+                border-left: 0.33vw solid desaturate(darken($highlight-pink__color, 4%), 1%);
                 border-bottom: 1px solid lighten($secondary-grey__color, 49%);
                 transition: color 0.2s linear;
             }
@@ -46,15 +46,15 @@
         &-items{
             list-style-type: none;
             display:none;
-            @include font(normal, 14px, 17px, normal);
+            @include font(normal, 0.94vw, 121.43%, normal);
             text-transform: capitalize;
-            margin-left: 34px;
+            margin-left: 9.44%;
             &>li:first-of-type{
-                margin-top: 24px;
+                margin-top: 1.6vw;
             }
         }
         &-item{
-            margin-top: 11px;
+            margin-top: 0.74vw;
             &>a{
                 text-decoration: none;
                 color: $secondary-grey__color;
@@ -71,29 +71,30 @@
             filter: invert(60%) sepia(51%) saturate(3302%) hue-rotate(313deg) brightness(91%) contrast(107%);
         }
         &[open]{
-            box-shadow: 5px 15px 20px $shadow-color;
+            box-shadow: 0.33vw 0.67vw 1.34vw $shadow-color;
         }    
         &-icon{
-            margin-left: 12px;
+            margin-left: 3.33%;
+            width: 4.7%;
             transition: filter 0.2s linear;
         }
     }
 
     .trending{
-        width: 120px;
+        width: 10.53%;
         &>ul{
-            width: 150px;
+            width: 123.16%;
         }
     }
     .size{
-        width:40px;
+        width: 3.51%;
         &>ul{
-            width: 80px;
+            width: 150.02%;
         }
     }
     .price{
         &>ul{
-            width: 120px;
+            width: 310.53%;
         }
     }
 
@@ -103,14 +104,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height:43px;
-    width:283px;
+    height: 2.87vw;
+    width: 24.82%;
     border: 1px solid lighten($secondary-grey__color, 49%);
 }
 [class^="catalog-page_"]{
-    margin-right: 18px;
+    margin-right: 6.36%;
     text-decoration: none;
-    @include font(300, 16px, 19px, normal);
+    @include font(300, 1.07vw, 118.75%, normal);
     color: lighten($secondary-grey__color, 49%);
     transition: color 0.2s linear;
 }
@@ -122,8 +123,8 @@
 }
 .arrow{
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 0.67vw;
+    height: 0.67vw;
     transform: rotate(45deg);
     transition: border-color 0.2s linear;
     &:hover{
@@ -131,9 +132,9 @@
     }
 }
 .arrow-previous{
-    margin-right: 18px;
-    border-bottom: 3px solid $arrows-bd__color;
-    border-left: 3px solid $arrows-bd__color;
+    margin-right: 6.36%;
+    border-bottom: 0.2vw solid $arrows-bd__color;
+    border-left: 0.2vw solid $arrows-bd__color;
     &:hover ~ .catalog-page_6{
         color: desaturate(darken($highlight-pink__color, 4%), 1%);
     }
@@ -142,8 +143,8 @@
     }    
 }
 .arrow-next{
-    border-top: 3px solid $arrows-bd__color;
-    border-right: 3px solid $arrows-bd__color;
+    border-top: 0.2vw solid $arrows-bd__color;
+    border-right: 0.2vw solid $arrows-bd__color;
     &:hover ~ .catalog-page_2{
         color: desaturate(darken($highlight-pink__color, 4%), 1%);
     }

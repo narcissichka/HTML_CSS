@@ -3,40 +3,44 @@
     &_{
         display: flex;
         align-items: center;
+        &>img{
+            width: 56.84%;
+        }
     }
     &-intro{
         display: flex;
+        width: 35.13%;
     }
     &-text{
-        @include font(700, 32px, 38px, normal);
+        @include font(700, 2.1395vw, 118.75%, normal);
         color: $dark-color;
         text-transform: uppercase;
         &__header{
-            @include font(900, 48px, 58px, normal);
+            @include font(900, 150%, 120.83%, normal);
         }
         &__fashion{
             color: $highlight-pink__color;
         }
     }
     .line{
-        width: 12px;
+        width: 3%;
         background-color: $highlight-pink__color;
-        margin-right: 16px;
+        margin-right: 4%;
     }
 }
 
 // special offers
 .offers{
-    padding-top: 65px;
+    padding-top: 4.34vw;
     text-align: center;
     text-transform: uppercase;
-    @include font(400, 16px, 19px, normal);
+    @include font(400, 1.07vw, 118.75%, normal);
     &-part1{
         display: flex; //a{display:block;}
         justify-content: space-between;
         &>a{
-            height: 260px;
-            width: $block-width;
+            height: 17.38vw;
+            width: 31.58%;
             position: relative;
             text-decoration: none;
             color:$offers-text__color;
@@ -53,9 +57,9 @@
         }
     }
     &-part2{
-        margin-top: 30px;
+        margin-top: 2.01vw;
         &>a{
-            height: 180px;
+            height: 12.03vw;
             width: 100%;
             display: block;
             position: relative;
@@ -97,7 +101,7 @@
         background-size: cover;
     }
     &-headtext{
-        @include font(700, 24px, 29px, normal);
+        @include font(700, 1.6vw, 120.83%, normal);
         color: $highlight-pink__color;
     }
 }
@@ -105,16 +109,16 @@
 .fetured{
     display: flex;
     flex-direction: column;
-    padding-top: 96px;
+    padding-top: 6.42vw;
     &-description{
         text-align: center;
     }
     &-header{
-        @include font(bold, 30px, 36px, normal);
+        @include font(bold, 2.01vw, 120%, normal);
         color: $dark-color;
     }
     &-text{
-        @include font(normal, 14px, 17px, normal);
+        @include font(normal, 0.94vw, 121.43%, normal);
         color: lighten($secondary-grey__color, 19%);
     }
 }
@@ -123,5 +127,99 @@
     &__button{
         align-self: center;
 	    display: inline-block;
+    }
+}
+
+@media screen and (max-width:768px){
+    .fetured{
+        padding-top: 20.18vw;
+        &-header{
+            font-size: 30px;
+        }
+        &-text{
+            font-size: 14px;
+        }
+    }
+    .introduction{
+        &_{
+            justify-content: space-around;
+            &>img{
+                height: 47.92vw;
+                width: auto;
+            }
+        }
+        &-intro{
+            width: 42.37%;
+        }
+        .line{
+            width: 3.86%;
+        }
+        &-text{
+            font-size: 24px;
+            &__header{
+                font-size: 44px;
+            }
+        }
+
+    }
+    .offers{
+        padding-top: 2.6vw;
+        font-size: 2.08vw;
+        &-part1>a{
+            height: 21.83vw;
+        }
+        &-part2>a{
+            height: 15.11vw;
+        }
+        &-headtext{
+            font-size: 3.13vw;
+        }
+    }
+}
+@media screen and (max-width:376px){
+    .introduction{
+        &_{
+            width: 100%;
+            height: 96.8vw;
+            &>img{
+                display: none;
+            }
+        }
+        &-intro{
+            width: 76.68%;
+        }
+        .line{
+            width: 3.5%;
+        }
+        &-text{
+            font-size: 20px;
+            &__header{
+                font-size: 38px;
+            }
+        }
+    }
+    .offers{
+        padding-top: 17.07vw;
+        font-size: 4.27vw;
+        &-part1{
+            flex-wrap: wrap;
+            &>a{
+                margin-top: 8.53vw;
+                width: 100%;
+                height: 65.87vw;
+                &:first-of-type{
+                    margin-top: none;
+                }
+            }
+        }
+        &-part2{
+            &>a{
+                margin-top: 8.53vw;
+                height: 29.6vw;
+            }
+        }
+        &-headtext{
+            font-size: 6.4vw;
+        }
     }
 }
