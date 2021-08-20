@@ -134,10 +134,10 @@
     .fetured{
         padding-top: 20.18vw;
         &-header{
-            font-size: 30px;
+            font-size: 3.91vw;
         }
         &-text{
-            font-size: 14px;
+            font-size: 1.82vw;
         }
     }
     .introduction{
@@ -155,9 +155,9 @@
             width: 3.86%;
         }
         &-text{
-            font-size: 24px;
+            font-size: 3.13vw;
             &__header{
-                font-size: 44px;
+                font-size: 5.73vw;
             }
         }
 
@@ -177,6 +177,14 @@
     }
 }
 @media screen and (max-width:376px){
+    .fetured{
+        &-header{
+            font-size: 8vw;
+        }
+        &-text{
+            font-size: 3.73vw;
+        }
+    }
     .introduction{
         &_{
             width: 100%;
@@ -192,9 +200,9 @@
             width: 3.5%;
         }
         &-text{
-            font-size: 20px;
+            font-size:  5.33vw;
             &__header{
-                font-size: 38px;
+                font-size: 10.13vw;
             }
         }
     }

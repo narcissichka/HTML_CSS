@@ -655,27 +655,28 @@ body{
        max-width: 95.7vw; 
    }
    .button{
-        @include font(400, 2.08, 121.43%, normal);
+        @include font(400, 2.08vw, 121.43%, normal);
        &_search{
             height:5.2vw;
             width: 5.3vw;
        }
        &_subscribe{
-           font-size: 14px;
+           font-size: 1.82vw;
            border-radius: 0 3.25vw 3.25vw 0;
        }
        &_socialmedia{
            width: 4.17vw;
            height: 4.17vw;
+           font-size: 1.95vw;
            line-height: 4.17vw;
        }
        &_add-item-to-cart{
             width: 16.02vw;
             height: 5.08vw;
-            font-size: 15px;
+            font-size: 1.95vw;
        }
        &_browse-all{
-           font-size: 16px;
+           font-size: 2.08vw;
            width: 27.47vw;
            height: 6.12vw;
            line-height: 6.12vw;
@@ -683,19 +684,19 @@ body{
        &_cartpage{
             width: 29.3vw;
             height: 6.51vw;
-            font-size: 14px;
+            font-size: 1.82vw;
             line-height: 6.51vw;
         }
         &_quote{
             width: 13.02vw;
             height: 4.43vw;
             line-height: 4.43vw;
-            font-size: 11px;
+            font-size: 1.43vw;
         }
         &_checkout{
             width: 35.81vw;
             height: 6.51vw;
-            font-size: 16px;
+            font-size: 2.08vw;
             line-height: 6.51vw;
         }
         &_add-product-to-cart{
@@ -708,7 +709,7 @@ body{
         }
    }
    .input{
-       font-size: 13px;
+       font-size: 1.69vw;
        height: 5.86vw;
    }
    .items{
@@ -718,13 +719,13 @@ body{
                width: 49.05%;
            }
            &-text{
-               font-size: 14px;
+               font-size: 1.82vw;
            }
            &-header{
-               font-size: 13px;
+               font-size: 1.69vw;
            }
            &-price{
-               font-size: 16px;
+               font-size: 2.08vw;
            }
        }
    }
@@ -743,10 +744,10 @@ body{
             }
         }
         &-header{
-            font-size: 20px;
+            font-size: 2.6vw;
         }
         &-text{
-            font-size: 14px;
+            font-size: 1.82vw;
         }
 
    }
@@ -761,22 +762,22 @@ body{
            width: 46.88%;
            margin-bottom: 6.25vw;
            &-text{
-              font-size: 20px;
+              font-size: 2.6vw;
            }
        }
        .subscription{
            &-header{
-               font-size: 24px;
+               font-size: 3.13vw;
            }
            &-text{
-               font-size: 18px;
+               font-size: 2.34vw;
            }
            &-form{
                &__input{
                     height: 6.51vw;
                     border-radius: 3.26vw 0 0 3.26vw;
                     padding-left: 2.86vw;
-                    font-size: 14px;
+                    font-size: 1.82vw;
                }
            }
        }
@@ -785,7 +786,7 @@ body{
         &__container{
             height: 10.42vw;
             .footer-lower__text{
-                font-size: 16px;
+                font-size: 2.08vw;
             }
         }
         .socialmedia__button{
@@ -824,7 +825,7 @@ body{
                     .search-input{
                         height: 5.21vw;
                         padding-left: 1.3vw;
-                        @include font(300, 13px, 123.08%, normal);
+                        @include font(300, 1.69vw, 123.08%, normal);
                     }
                     .search-button{
                         .search-icon{
@@ -839,7 +840,7 @@ body{
                 width: 1.82vw;
                 height: 1.82vw;
                 border-radius: 0.91vw;
-                @include font(normal, 10px, 140%, normal);
+                @include font(normal, 1.3vw, 140%, normal);
             }
         }
     }
@@ -850,9 +851,46 @@ body{
         .nav{
             width: 18.21vw;
             height: 54.13vw;
-            @include font(normal, 11px, 121.43%, normal);
+            @include font(normal, 1.43vw, 121.43%, normal);
 
         }
+    }
+    .catalog-head{
+        &er{
+            height: 19.27vw;
+            &__heading{
+                font-size: 3.13vw;
+            }
+            .breadcrumbs{
+                font-size: 1.82vw;
+            }
+        }
+    }
+    .filters{
+        &-summary{
+            font-size: 1.82vw;
+            &::after{
+                top:0.25vw;//2
+                margin-left: 1.3vw;//10
+                width: 0.65vw;//5
+                height: 0.65vw;
+                border-bottom: 0.25vw solid $secondary-grey__color;
+                border-right: 0.25vw solid $secondary-grey__color;
+            }
+        }
+        &-variants{
+            font-size: 1.82vw;
+        }
+    }
+    .custom-checkbox+label::before{
+        width: 1.56vw;
+        height: 1.56vw;
+    }
+    .custom-radio+label::before{
+        width: 1.82vw;
+        height: 1.82vw;
+        margin-right: 1.3vw;//10
+        border-radius: 1.04vw;//8
     }
 
 }
@@ -861,29 +899,41 @@ body{
         max-width: 91.47vw;
     }
     .button{
+        font-size: 4.27vw;
        &_search{
             height:10.67vw;
             width: 10.93vw;
        }
        &_browse-all{
+           font-size: 4.27vw;
            width:  56.27vw;
            height: 12.53vw;
            line-height: 12.53vw;
        }
        &_subscribe{
+            font-size: 3.73vw;
             border-radius: 0 6.67vw 6.67vw 0;
         }
         &_socialmedia{
             width: 8.53vw;
             height: 8.53vw;
+            font-size: 4vw;
             line-height: 8.53vw;
         }
         &_add-item-to-cart{
             width: 36.8vw;
             height: 11.47vw;
-            font-size: 14px;
+            font-size: 3.73vw;
        }
+       &_join{
+            width: 44.53vw;
+            height: 13.33vw;
+        }
    }
+   .input{
+        font-size: 3.47vw;
+        height: 12vw;
+    }
     .header{
         &-content{
             height:19.73vw;
@@ -896,7 +946,7 @@ body{
                 }
             }
             &__right{
-                width:9.33%;
+                width: 9.33%;
                 & > a:first-of-type, & > a:last-of-type{
                     display: none;
                 }
@@ -911,7 +961,7 @@ body{
                         height: 10.67vw;
                         width: 26.67vw;
                         padding-left: 2.67vw;
-                        font-size: 11px;
+                        font-size: 2.93vw;
                     }
                     .search-button{
                         .search-icon{
@@ -934,6 +984,7 @@ body{
            left:-21vw;
            width: 30vw;
            height: 77vw;
+           font-size: 2.93vw;
            line-height: 100%;
        }
 
@@ -947,10 +998,19 @@ body{
             &-cart__add-txt{
                 margin-left: 2.93vw;
             }
+            &-text{
+                font-size: 3.73vw;
+            }
+            &-header{
+                font-size: 3.47vw;
+            }
+            &-price{
+                font-size: 4.27vw;
+            }
         }
     }
     .information{
-        margin-top:25.6vw;
+        margin-top:16.6vw;
         &-cell{
             width: 90%;
             margin-bottom: 12.53vw;
@@ -961,6 +1021,12 @@ body{
                 margin-bottom: 21.6vw;
             }
         }
+        &-header{
+            font-size: 5.33vw;
+        }
+        &-text{
+            font-size: 3.73vw;
+        }
     }
     .footer-upper{
         &__container{
@@ -970,18 +1036,22 @@ body{
                 width: 90%;
                 margin-bottom: 15.73vw;
                 &-text{
-                    font-size:18px;
+                    font-size:4.8vw;
                 }
             }
             .subscription{
+                &-header{
+                    font-size: 6.4vw;
+                }
                 &-text{
-                    font-size: 14px;
+                    font-size: 3.73vw;
                 }
                 &-form{
                     &__input{
                          height: 13.33vw;
                          border-radius: 6.67vw 0 0 6.67vw;
                          padding-left: 5.87vw;
+                         font-size: 3.73vw;
                     }
                 }
             }
@@ -992,6 +1062,11 @@ body{
             height: 38.13vw;
             flex-direction: column;
             place-content: center;
+            .footer-lower__text{
+                font-size: 4.27vw;
+                order:2;
+                margin-block: 10.67vw 2.4vw;
+            }
         }
         .socialmedia{
             order:1;
@@ -1003,9 +1078,46 @@ body{
                 }
             }
         }
-        &__text{
-            order:2;
-            margin-block: 10.67vw 2.4vw;
+       
+    }
+    .catalog-head{
+        &er{
+            height: 39.47vw;
+            flex-direction: column;
+            justify-content: center;
+            &__heading{
+                font-size: 6.4vw;
+            }
+            .breadcrumbs{
+                margin-top: 8.53vw;
+                font-size: 3.73vw;
+            }
         }
+    }
+    .filters{
+        &-summary{
+            font-size: 3.2vw;
+            &::after{
+                top:0.53vw;//2
+                margin-left: 2.67vw;//10
+                width: 1.33vw;//5
+                height: 1.33vw;
+                border-bottom: 0.53vw solid $secondary-grey__color;
+                border-right: 0.53vw solid $secondary-grey__color;
+            }
+        }
+        &-variants{
+            font-size: 3.73vw;
+        }
+    }
+    .custom-checkbox+label::before{
+        width: 3.2vw;//12
+        height: 3.2vw;
+    }
+    .custom-radio+label::before{
+        width: 3.73vw;//14
+        height: 3.73vw;
+        margin-right: 2.67vw;
+        border-radius: 2.13vw;
     }
 }
