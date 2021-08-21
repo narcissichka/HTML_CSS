@@ -113,7 +113,7 @@ body{
         color: darken($secondary-grey__color, 14%);
     }
     &_checkout{
-        width: 18.38vw;
+        width:  100%;
         height: 3.34vw;
         text-transform: uppercase;
         @include font(300, 1.07vw, 312.5%, normal);
@@ -694,7 +694,7 @@ body{
             font-size: 1.43vw;
         }
         &_checkout{
-            width: 35.81vw;
+            // width: 35.81vw;
             height: 6.51vw;
             font-size: 2.08vw;
             line-height: 6.51vw;
@@ -928,6 +928,29 @@ body{
        &_join{
             width: 44.53vw;
             height: 13.33vw;
+        }
+        &_cartpage{
+            width: 45vw;
+            height: 8.8vw;
+            font-size: 3.2vw;
+            line-height: 8.8vw;
+            text-transform: capitalize;
+        }
+        &_quote{
+            width: 26.67vw;
+            height: 9.07vw;
+            line-height: 9.07vw;
+            font-size: 2.93vw;
+        }
+        &_checkout{
+            // width:  100%;
+            height: 13.33vw;
+            font-size: 4.27vw;
+            line-height: 13.33vw;
+        }
+        &_add-product-to-cart{
+            width: 56.27vw;
+            height: 12.53vw;
         }
    }
    .input{
