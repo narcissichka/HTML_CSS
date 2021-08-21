@@ -18,6 +18,9 @@
 body{
     font-family: 'Lato', sans-serif;
 }
+details summary::-webkit-details-marker {
+    display:none;
+}
 
 @mixin font($fw, $fs, $lh, $fstyle){
     font-weight: $fw;
@@ -422,7 +425,6 @@ body{
         &__container{
             padding-top: 5.75vw;
             position:relative;
-            height: 100%;
             z-index: 2;
             @extend .flex-container;
             text-align: center;
@@ -535,6 +537,9 @@ body{
     &>details{
         position: relative;
         margin-right: 2.63%;
+        &::before{
+            display: none;
+        }
     }
     &>details:last-of-type{
         margin-right: 0;

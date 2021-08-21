@@ -33,6 +33,10 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 .flex-container, .header-content, .information-container, .footer-upper__container, .footer-lower__container, .catalog-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -605,7 +609,6 @@ body {
 .footer-upper__container {
   padding-top: 5.75vw;
   position: relative;
-  height: 100%;
   z-index: 2;
   text-align: center;
 }
@@ -764,6 +767,10 @@ body {
 .filters > details {
   position: relative;
   margin-right: 2.63%;
+}
+
+.filters > details::before {
+  display: none;
 }
 
 .filters > details:last-of-type {
