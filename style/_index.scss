@@ -35,54 +35,29 @@
     text-align: center;
     text-transform: uppercase;
     @include font(400, 1.07vw, 118.75%, normal);
-    &-part1{
-        display: flex; //a{display:block;}
-        justify-content: space-between;
-        &>a{
-            height: 17.38vw;
-            width: 31.58%;
-            position: relative;
-            text-decoration: none;
-            color:$offers-text__color;
-            transition: transform 0.3s linear;
-            &>p{
-                position:relative;
-                top:40%;
-                z-index: 2;
-            }
-            &:hover{
-                transform: scale(1.1);
-                z-index: 1;
-            }
+    display: grid;
+    grid-template: 17.38vw 12.03vw / repeat(3, 1fr);
+    grid-column-gap:2.5%;
+    grid-row-gap: 6%;
+    &>a{
+        position: relative;
+        text-decoration: none;
+        color:$offers-text__color;
+        transition: transform 0.3s linear;
+        &>p{
+            position:relative;
+            top:40%;
+            z-index: 2;
         }
-    }
-    &-part2{
-        margin-top: 2.01vw;
-        &>a{
-            height: 12.03vw;
-            width: 100%;
-            display: block;
-            position: relative;
-            text-decoration: none;
-            color:$offers-text__color;
-            transition: transform 0.3s linear;
-            &>p{
-                position:relative;
-                top:40%;
-                z-index: 2;
-            }
-            &:hover{
-                transform: scale(1.1);
-            }
+        &:hover{
+            transform: scale(1.1);
+            z-index: 1;
         }
     }
     .cover{
         position: absolute;
+        inset: 0;
         background: $offers-cover__color;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
     }
     &-women{
         background: url("../image/offers-women.png") no-repeat center center;
@@ -97,9 +72,11 @@
         background-size: cover;
     }
     &-accesories{
+        grid-column: 1/4;
         background: url("../image/offers-accesories.png") no-repeat center center;
         background-size: cover;
     }
+   
     &-headtext{
         @include font(700, 1.6vw, 120.83%, normal);
         color: $highlight-pink__color;
@@ -109,7 +86,7 @@
 .fetured{
     display: flex;
     flex-direction: column;
-    padding-top: 6.42vw;
+    padding-top: 8vw;
     &-description{
         text-align: center;
     }
@@ -165,19 +142,20 @@
     .offers{
         padding-top: 2.6vw;
         font-size: 2.08vw;
-        &-part1>a{
-            height: 21.83vw;
-        }
-        &-part2>a{
-            height: 15.11vw;
-        }
+        grid-template-rows: 21.83vw 15.11vw;
         &-headtext{
             font-size: 3.13vw;
+        }
+        &>a:last-of-type{
+            &>p{
+                top: 35%;
+            }
         }
     }
 }
 @media screen and (max-width:376px){
     .fetured{
+        padding-top: 45.18vw;
         &-header{
             font-size: 8vw;
         }
@@ -209,25 +187,13 @@
     .offers{
         padding-top: 17.07vw;
         font-size: 4.27vw;
-        &-part1{
-            flex-wrap: wrap;
-            &>a{
-                margin-top: 8.53vw;
-                width: 100%;
-                height: 65.87vw;
-                &:first-of-type{
-                    margin-top: none;
-                }
-            }
-        }
-        &-part2{
-            &>a{
-                margin-top: 8.53vw;
-                height: 29.6vw;
-            }
-        }
+        grid-template: repeat(3, 65.87vw) 29.6vw / 100%;
+        grid-row-gap: 3.5%;
         &-headtext{
             font-size: 6.4vw;
+        }
+        &>a:last-of-type{
+            grid-column: span 1;
         }
     }
 }
