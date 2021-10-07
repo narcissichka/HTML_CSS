@@ -379,25 +379,19 @@ details summary::-webkit-details-marker {
 }
 
 //common for catalog and index
-// .items{
-//     margin-block: 4.3%;
-//     display: flex;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-// }
 .items-grid {
     margin-block: 4.3%;
     display: grid;
     grid-gap: 1.5%;
 
     &_index {
-        grid-template: repeat(2, 40vw) / repeat(3, 1fr);
+        grid-template: repeat(2, 50%) / repeat(3, 1fr);
     }
 
     &_catalog {
         grid-column-gap: 2.58%;
         grid-row-gap: 1.2%;
-        grid-template: repeat(3, 40vw) / repeat(3, 1fr);
+        grid-template: repeat(3, 33%) / repeat(3, 1fr);
     }
 
     &_product {
@@ -409,7 +403,6 @@ details summary::-webkit-details-marker {
     position: relative;
     transition: box-shadow 0.2s linear;
     background-color: lighten($secondary-grey__color, 54%);
-
     &:hover {
         box-shadow: 0.33vw 0.67vw 1.34vw $shadow-color;
     }
@@ -519,20 +512,13 @@ details summary::-webkit-details-marker {
 
             .review {
                 width: 31.58%;
-                transition: transform 1s cubic-bezier(.54, .05, 1, .99);
-
                 &-text {
                     margin-top: 6.7%;
                     @include font(normal, 1.34vw, 120%, italic);
                     color: $dark-color;
                 }
-
                 &-icon {
                     width: 26.67%;
-                }
-
-                &:hover {
-                    transform: rotate(360deg);
                 }
             }
 
