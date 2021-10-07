@@ -8,8 +8,8 @@
     <title>The Brand</title>
     <link rel="icon" href="image/logo.svg" type="image/svg">
     <script src="https://kit.fontawesome.com/890dd60a78.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style/common.css">
+    <!-- <link rel="stylesheet" href="style/index.css"> -->
+    <link rel="stylesheet" href="style/style.css" media="print" onload="this.media='all'">
 </head>
 
 <body>
@@ -24,8 +24,8 @@
                                 <img class="search icon" src="image/search.svg" alt="search">
                                 <form action="#" class="search-form">
                                     <input class="search-input" type="text" placeholder="Searching on site...">
-                                    <button class="search-button" type="submit"><img class="search-icon"
-                                            src="image/search.svg" alt="search"></button>
+                                    <button class="search-button button button_search" type="submit"><img
+                                            class="search-icon" src="image/search.svg" alt="search"></button>
                                 </form>
                             </div>
                         </div>
@@ -67,8 +67,8 @@
                                     </ul>
                                 </div>
                             </nav>
-                            <a href="#"><img class="account icon" src="image/account.svg" alt="account"></a>
-                            <a href="#"><img class="cart icon" src="image/cart.svg" alt="cart"></a>
+                            <a href="checkout.html"><img class="account icon" src="image/account.svg" alt="account"></a>
+                            <a href="cart.html" class="cart"><img class="carticon" src="image/cart.svg" alt="cart"></a>
 
                         </div>
                     </div>
@@ -76,142 +76,148 @@
             </header>
             <main>
                 <div class="introduction">
-                    <img src="image/mainpage-pic.png" alt="man">
-                    <div class="introduction-intro">
-                        <span class="line"></span>
-                        <div class="introduction-text">
-                            <h1 class="introduction-text__header">the brand</h1>
-                            of luxerious <span class="introduction-text__fashion">fashion</span>
+                    <div class="container introduction_">
+                        <!-- <video src="https://www.youtube.com/embed/80P9LJU8GWU" controls autoplay preload="metadata"></video> -->
+                        <img loading="lazy" src="image/mainpage-pic.png" alt="man">
+                        <div class="introduction-intro">
+                            <span class="line"></span>
+                            <div class="introduction-text">
+                                <h1 class="introduction-text__header">the brand</h1>
+                                of luxerious <span class="introduction-text__fashion">fashion</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <section class="offers container">
-                    <div class="offers-part1">
-                        <a href="catalog.html" class="offers-women">
-                            <div class="cover"></div>
-                            <p class="offers-text">
-                                30% off<br>
-                                <span class="offers-headtext">for women</span>
-                            </p>
-                        </a>
-                        <a href="catalog.html" class="offers-men">
-                            <div class="cover"></div>
-                            <p class="offers-text">
-                                hot deal<br>
-                                <span class="offers-headtext">for men</span>
-                            </p>
-                        </a>
-                        <a href="catalog.html" class="offers-kids">
-                            <div class="cover"></div>
-                            <p class="offers-text">
-                                new arrivals<br>
-                                <span class="offers-headtext">for kids</span>
-                            </p>
-                        </a>
-                    </div>
-                    <div class="offers-part2">
-                        <a href="catalog.html" class="offers-accesories">
-                            <div class="cover"></div>
-                            <p class="offers-text">
-                                luxerious &amp; trendy<br>
-                                <span class="offers-headtext">accesories</span>
-                            </p>
-                        </a>
-                    </div>
-                </section>
+                <div class="offers container">
+                    <!--  using section thows warning (lack of heading) -->
+                    <a href="catalog.html" class="offers-women">
+                        <div class="cover"></div>
+                        <p class="offers-text">
+                            30% off<br>
+                            <span class="offers-headtext">for women</span>
+                        </p>
+                    </a>
+                    <a href="catalog.html" class="offers-men">
+                        <div class="cover"></div>
+                        <p class="offers-text">
+                            hot deal<br>
+                            <span class="offers-headtext">for men</span>
+                        </p>
+                    </a>
+                    <a href="catalog.html" class="offers-kids">
+                        <div class="cover"></div>
+                        <p class="offers-text">
+                            new arrivals<br>
+                            <span class="offers-headtext">for kids</span>
+                        </p>
+                    </a>
+                    <a href="catalog.html" class="offers-accesories">
+                        <div class="cover"></div>
+                        <p class="offers-text">
+                            luxerious &amp; trendy<br>
+                            <span class="offers-headtext">accesories</span>
+                        </p>
+                    </a>
+                </div>
             </main>
             <section class="fetured container">
                 <div class="fetured-description">
                     <h2 class="fetured-header">Fetured Items</h2>
                     <div class="fetured-text">Shop for items based on&nbsp;what we&nbsp;featured in&nbsp;this week</div>
                 </div>
-                <div class="items">
-                    <div class="item-box">
-                        <a href="product.html" class="item">
-                            <img src="image/item1.png" alt="item1" class="item-img">
+                <div class="items-grid items-grid_index">
+                    <div class="item-grid-box">
+                        <a href="product.html#" class="item">
+                            <img loading="lazy" src="image/item1.png" alt="item1" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
                                 Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
                         <div class="item-cart">
-                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
-                                <p class="item-cart__add-txt">Add to cart</p>
+                            <a href="#" class="button item-cart-add__button button_add-item-to-cart"><i
+                                    class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add&nbsp;to&nbsp;cart</p>
                             </a>
                         </div>
                     </div>
-                    <div class="item-box">
-                        <a href="product.html" class="item">
-                            <img src="image/item2.png" alt="item2" class="item-img">
+                    <div class="item-grid-box">
+                        <a href="product.html#" class="item">
+                            <img loading="lazy" src="image/item2.png" alt="item2" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
                                 Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
                         <div class="item-cart">
-                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
-                                <p class="item-cart__add-txt">Add to cart</p>
+                            <a href="#" class="button item-cart-add__button button_add-item-to-cart"><i
+                                    class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add&nbsp;to&nbsp;cart</p>
                             </a>
                         </div>
                     </div>
-                    <div class="item-box">
-                        <a href="product.html" class="item">
-                            <img src="image/item3.png" alt="item3" class="item-img">
+                    <div class="item-grid-box">
+                        <a href="product.html#" class="item">
+                            <img loading="lazy" src="image/item3.png" alt="item3" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
                                 Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
                         <div class="item-cart">
-                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
-                                <p class="item-cart__add-txt">Add to cart</p>
+                            <a href="#" class="button item-cart-add__button button_add-item-to-cart"><i
+                                    class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add&nbsp;to&nbsp;cart</p>
                             </a>
                         </div>
                     </div>
-                    <div class="item-box">
-                        <a href="product.html" class="item">
-                            <img src="image/item4.png" alt="item4" class="item-img">
+                    <div class="item-grid-box">
+                        <a href="product.html#" class="item">
+                            <img loading="lazy" src="image/item4.png" alt="item4" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
                                 Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
                         <div class="item-cart">
-                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
-                                <p class="item-cart__add-txt">Add to cart</p>
+                            <a href="#" class="button item-cart-add__button button_add-item-to-cart"><i
+                                    class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add&nbsp;to&nbsp;cart</p>
                             </a>
                         </div>
                     </div>
-                    <div class="item-box">
-                        <a href="product.html" class="item">
-                            <img src="image/item5.png" alt="item5" class="item-img">
+                    <div class="item-grid-box">
+                        <a href="product.html#" class="item">
+                            <img loading="lazy" src="image/item5.png" alt="item5" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
                                 Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
                         <div class="item-cart">
-                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
-                                <p class="item-cart__add-txt">Add to cart</p>
+                            <a href="#" class="button item-cart-add__button button_add-item-to-cart"><i
+                                    class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add&nbsp;to&nbsp;cart</p>
                             </a>
                         </div>
                     </div>
-                    <div class="item-box">
-                        <a href="product.html" class="item">
-                            <img src="image/item6.png" alt="item6" class="item-img">
+                    <div class="item-grid-box">
+                        <a href="product.html#" class="item">
+                            <img loading="lazy" src="image/item6.png" alt="item6" class="item-img">
                             <h4 class="item-header">ELLERY X M&rsquo;O CAPSULE</h4>
                             <p class="item-text">Known for her sculptural takes on&nbsp;traditional tailoring,
                                 Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
                             <p class="item-price">$52.00</p>
                         </a>
                         <div class="item-cart">
-                            <a href="#" class="item-cart__add"><i class="fas fa-shopping-cart"></i>
-                                <p class="item-cart__add-txt">Add to cart</p>
+                            <a href="#" class="button item-cart-add__button button_add-item-to-cart"><i
+                                    class="fas fa-shopping-cart"></i>
+                                <p class="item-cart__add-txt">Add&nbsp;to&nbsp;cart</p>
                             </a>
                         </div>
                     </div>
                 </div>
-                <a href="catalog.html" class="items-button">Browse All Product</a>
+                <a href="catalog.html" class="button items__button button_browse-all">Browse All Product</a>
             </section>
             <div class="information">
                 <div class="information-container container">
@@ -242,8 +248,9 @@
                 <div class="footer-upper__container container">
                     <figure class="review">
                         <img src="image/review-icon.png" alt="review" class="review-icon">
-                        <p class="review-text">&quot;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
-                            a&nbsp;pulvinar purus condimentum&quot;</p>
+                        <figcaption class="review-text">&quot;Vestibulum quis porttitor dui! Quisque viverra
+                            nunc&nbsp;mi,
+                            a&nbsp;pulvinar purus condimentum&quot;</figcaption>
                     </figure>
                     <div class="subscribtion">
                         <h3 class="subscription-header">subscribe</h3>
@@ -251,7 +258,7 @@
                         <form action="#" class="subscription-form">
                             <input type="email" class="subscription-form__input" required
                                 placeholder="Enter Your Email">
-                            <button type="submit" class="subscription-form__button">Subscribe</button>
+                            <button type="submit" class="button button_subscribe">Subscribe</button>
                         </form>
                     </div>
                 </div>
@@ -262,10 +269,14 @@
                         &copy; 2021 Brand All Rights Reserved.
                     </p>
                     <div class="socialmedia">
-                        <a href="#" class="socialmedia-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="socialmedia-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="socialmedia-link"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#" class="socialmedia-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="socialmedia-link button socialmedia__button button_socialmedia"><i
+                                class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
